@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-05-21T12:20:01.496220+00:00",
-  "last_updated_local": "2026-05-21 05:20:01 PDT",
+  "last_updated": "2026-05-21T12:25:01.995059+00:00",
+  "last_updated_local": "2026-05-21 05:25:01 PDT",
   "cowrie": {
-    "total_connections": 81,
+    "total_connections": 82,
     "total_login_attempts": 64,
     "successful_logins": 7,
-    "unique_ips": 16,
+    "unique_ips": 17,
     "top_usernames": [
       [
         "solv",
@@ -325,8 +325,8 @@
   "suricata": {
     "total_alerts": 474,
     "alerts_by_severity": {
-      "2": 357,
-      "3": 117
+      "3": 118,
+      "2": 356
     },
     "top_signatures": [
       [
@@ -413,20 +413,6 @@
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "03:39:43",
-        "severity": 2,
-        "signature": "ET CINS Active Threat Intelligence Poor Reputation IP group 124",
-        "src_ip": "79.124.40.170",
-        "dest_port": 8000
-      },
-      {
-        "time": "03:56:31",
-        "severity": 2,
-        "signature": "ET DROP Dshield Block Listed Source group 1",
-        "src_ip": "87.251.64.149",
-        "dest_port": 22
-      },
       {
         "time": "03:58:12",
         "severity": 2,
@@ -552,12 +538,26 @@
         "signature": "ET DROP Dshield Block Listed Source group 1",
         "src_ip": "87.251.64.149",
         "dest_port": 22
+      },
+      {
+        "time": "05:21:40",
+        "severity": 3,
+        "signature": "SURICATA STREAM Packet with invalid timestamp",
+        "src_ip": "80.94.92.168",
+        "dest_port": 22
+      },
+      {
+        "time": "05:23:02",
+        "severity": 2,
+        "signature": "ET CINS Active Threat Intelligence Poor Reputation IP group 133",
+        "src_ip": "89.248.163.200",
+        "dest_port": 8000
       }
     ]
   },
   "dshield": {
-    "total_connections": 180,
-    "unique_ips": 84,
+    "total_connections": 182,
+    "unique_ips": 85,
     "top_src_ips": [
       [
         "80.94.92.184",
@@ -603,7 +603,7 @@
     "top_dest_ports": [
       [
         "22",
-        101
+        102
       ],
       [
         "8443",
@@ -611,18 +611,10 @@
       ],
       [
         "8000",
-        31
+        32
       ]
     ],
     "recent_connections": [
-      {
-        "src_ip": "91.224.92.147",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "109.123.111.89",
-        "dest_port": "22"
-      },
       {
         "src_ip": "49.51.161.251",
         "dest_port": "8443"
@@ -694,6 +686,14 @@
       {
         "src_ip": "87.251.64.149",
         "dest_port": "22"
+      },
+      {
+        "src_ip": "80.94.92.168",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "89.248.163.200",
+        "dest_port": "8000"
       }
     ]
   }
