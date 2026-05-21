@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-05-21T09:00:02.046263+00:00",
-  "last_updated_local": "2026-05-21 02:00:02 PDT",
+  "last_updated": "2026-05-21T09:05:01.855244+00:00",
+  "last_updated_local": "2026-05-21 02:05:01 PDT",
   "cowrie": {
-    "total_connections": 31,
-    "total_login_attempts": 21,
-    "successful_logins": 3,
+    "total_connections": 33,
+    "total_login_attempts": 23,
+    "successful_logins": 4,
     "unique_ips": 9,
     "top_usernames": [
       [
         "solv",
-        9
+        11
       ],
       [
         "sol",
@@ -46,19 +46,19 @@
         3
       ],
       [
+        "1234",
+        3
+      ],
+      [
+        "123456",
+        3
+      ],
+      [
         "12345678",
         3
       ],
       [
-        "1234",
-        2
-      ],
-      [
         "solv",
-        2
-      ],
-      [
-        "123456",
         2
       ],
       [
@@ -89,7 +89,7 @@
       ],
       [
         "80.94.92.184",
-        6
+        8
       ],
       [
         "45.148.10.121",
@@ -147,23 +147,18 @@
         "commands": [
           "/bin/./uname -s -v -n -r -m"
         ]
+      },
+      {
+        "ip": "80.94.92.184",
+        "username": "solv",
+        "password": "123456",
+        "time": "02:00:12",
+        "commands": [
+          "/bin/./uname -s -v -n -r -m"
+        ]
       }
     ],
     "recent_attempts": [
-      {
-        "time": "00:03:40",
-        "ip": "80.94.92.171",
-        "username": "sol",
-        "password": "1234",
-        "success": false
-      },
-      {
-        "time": "00:50:30",
-        "ip": "45.148.10.121",
-        "username": "admin",
-        "password": "admin",
-        "success": false
-      },
       {
         "time": "00:58:53",
         "ip": "2.57.122.238",
@@ -289,23 +284,37 @@
         "username": "solv",
         "password": "123",
         "success": false
+      },
+      {
+        "time": "02:00:12",
+        "ip": "80.94.92.184",
+        "username": "solv",
+        "password": "123456",
+        "success": true
+      },
+      {
+        "time": "02:03:18",
+        "ip": "80.94.92.184",
+        "username": "solv",
+        "password": "1234",
+        "success": false
       }
     ]
   },
   "suricata": {
     "total_alerts": 461,
     "alerts_by_severity": {
-      "2": 373,
-      "3": 88
+      "2": 371,
+      "3": 90
     },
     "top_signatures": [
       [
         "ET DROP Dshield Block Listed Source group 1",
-        116
+        114
       ],
       [
         "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        70
+        72
       ],
       [
         "ET COMPROMISED Known Compromised or Hostile Host Traffic group 14",
@@ -383,27 +392,6 @@
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "01:29:48",
-        "severity": 2,
-        "signature": "ET DROP Spamhaus DROP Listed Traffic Inbound group 11",
-        "src_ip": "80.94.92.184",
-        "dest_port": 22
-      },
-      {
-        "time": "01:32:31",
-        "severity": 2,
-        "signature": "ET COMPROMISED Known Compromised or Hostile Host Traffic group 14",
-        "src_ip": "45.139.122.80",
-        "dest_port": 8000
-      },
-      {
-        "time": "01:34:48",
-        "severity": 2,
-        "signature": "ET CINS Active Threat Intelligence Poor Reputation IP group 277",
-        "src_ip": "198.58.111.249",
-        "dest_port": 8443
-      },
       {
         "time": "01:35:09",
         "severity": 2,
@@ -522,12 +510,33 @@
         "signature": "SURICATA Applayer Mismatch protocol both directions",
         "src_ip": "65.49.1.108",
         "dest_port": 22
+      },
+      {
+        "time": "02:00:11",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "80.94.92.184",
+        "dest_port": 22
+      },
+      {
+        "time": "02:03:16",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "80.94.92.184",
+        "dest_port": 22
+      },
+      {
+        "time": "02:03:16",
+        "severity": 3,
+        "signature": "SURICATA STREAM Packet with invalid timestamp",
+        "src_ip": "80.94.92.184",
+        "dest_port": 22
       }
     ]
   },
   "dshield": {
-    "total_connections": 70,
-    "unique_ips": 42,
+    "total_connections": 73,
+    "unique_ips": 43,
     "top_src_ips": [
       [
         "2.57.122.238",
@@ -535,7 +544,7 @@
       ],
       [
         "80.94.92.184",
-        8
+        9
       ],
       [
         "45.148.10.121",
@@ -558,26 +567,26 @@
         2
       ],
       [
+        "65.109.221.116",
+        2
+      ],
+      [
         "79.124.49.174",
         1
       ],
       [
         "151.243.11.35",
         1
-      ],
-      [
-        "45.148.10.230",
-        1
       ]
     ],
     "top_dest_ports": [
       [
         "22",
-        38
+        39
       ],
       [
         "8443",
-        18
+        20
       ],
       [
         "8000",
@@ -585,18 +594,6 @@
       ]
     ],
     "recent_connections": [
-      {
-        "src_ip": "198.58.111.249",
-        "dest_port": "8443"
-      },
-      {
-        "src_ip": "5.61.209.33",
-        "dest_port": "8000"
-      },
-      {
-        "src_ip": "103.77.246.173",
-        "dest_port": "8000"
-      },
       {
         "src_ip": "20.65.194.129",
         "dest_port": "8443"
@@ -660,6 +657,18 @@
       {
         "src_ip": "65.49.1.108",
         "dest_port": "22"
+      },
+      {
+        "src_ip": "80.94.92.184",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "65.109.221.116",
+        "dest_port": "8443"
+      },
+      {
+        "src_ip": "65.109.221.116",
+        "dest_port": "8443"
       },
       {
         "src_ip": "80.94.92.184",
