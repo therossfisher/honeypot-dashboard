@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-21T12:10:02.068974+00:00",
-  "last_updated_local": "2026-05-21 05:10:02 PDT",
+  "last_updated": "2026-05-21T12:15:01.609085+00:00",
+  "last_updated_local": "2026-05-21 05:15:01 PDT",
   "cowrie": {
     "total_connections": 80,
     "total_login_attempts": 61,
@@ -358,11 +358,11 @@
         11
       ],
       [
-        "ET DROP Spamhaus DROP Listed Traffic Inbound group 11",
+        "SURICATA SSH invalid banner",
         8
       ],
       [
-        "SURICATA SSH invalid banner",
+        "ET DROP Spamhaus DROP Listed Traffic Inbound group 11",
         8
       ],
       [
@@ -413,13 +413,6 @@
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "03:37:42",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "80.94.92.184",
-        "dest_port": 22
-      },
       {
         "time": "03:39:03",
         "severity": 2,
@@ -552,12 +545,19 @@
         "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
         "src_ip": "130.12.180.51",
         "dest_port": 22
+      },
+      {
+        "time": "05:12:02",
+        "severity": 2,
+        "signature": "ET DROP Spamhaus DROP Listed Traffic Inbound group 11",
+        "src_ip": "80.94.92.168",
+        "dest_port": 22
       }
     ]
   },
   "dshield": {
-    "total_connections": 177,
-    "unique_ips": 82,
+    "total_connections": 179,
+    "unique_ips": 84,
     "top_src_ips": [
       [
         "80.94.92.184",
@@ -603,11 +603,11 @@
     "top_dest_ports": [
       [
         "22",
-        99
+        100
       ],
       [
         "8443",
-        47
+        48
       ],
       [
         "8000",
@@ -615,14 +615,6 @@
       ]
     ],
     "recent_connections": [
-      {
-        "src_ip": "223.244.100.235",
-        "dest_port": "8443"
-      },
-      {
-        "src_ip": "223.244.100.235",
-        "dest_port": "8443"
-      },
       {
         "src_ip": "193.163.125.212",
         "dest_port": "8000"
@@ -693,6 +685,14 @@
       },
       {
         "src_ip": "209.141.45.103",
+        "dest_port": "8443"
+      },
+      {
+        "src_ip": "80.94.92.168",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "177.136.254.165",
         "dest_port": "8443"
       }
     ]
