@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-05-21T12:25:01.995059+00:00",
-  "last_updated_local": "2026-05-21 05:25:01 PDT",
+  "last_updated": "2026-05-21T12:30:02.095421+00:00",
+  "last_updated_local": "2026-05-21 05:30:02 PDT",
   "cowrie": {
-    "total_connections": 82,
-    "total_login_attempts": 64,
+    "total_connections": 83,
+    "total_login_attempts": 65,
     "successful_logins": 7,
     "unique_ips": 17,
     "top_usernames": [
@@ -17,7 +17,7 @@
       ],
       [
         "solana",
-        7
+        8
       ],
       [
         "ubuntu",
@@ -54,12 +54,12 @@
         6
       ],
       [
-        "12345678",
+        "solana",
         5
       ],
       [
-        "solana",
-        4
+        "12345678",
+        5
       ],
       [
         "solv",
@@ -128,8 +128,8 @@
         2
       ],
       [
-        "80.66.83.43",
-        1
+        "80.94.92.168",
+        2
       ]
     ],
     "attacker_sessions": [
@@ -180,13 +180,6 @@
       }
     ],
     "recent_attempts": [
-      {
-        "time": "03:06:35",
-        "ip": "80.94.92.184",
-        "username": "ethereum",
-        "password": "ethereum",
-        "success": false
-      },
       {
         "time": "03:09:16",
         "ip": "80.94.92.184",
@@ -319,14 +312,21 @@
         "username": "support",
         "password": "123456789",
         "success": true
+      },
+      {
+        "time": "05:29:44",
+        "ip": "80.94.92.168",
+        "username": "solana",
+        "password": "solana",
+        "success": false
       }
     ]
   },
   "suricata": {
     "total_alerts": 474,
     "alerts_by_severity": {
-      "3": 118,
-      "2": 356
+      "2": 356,
+      "3": 118
     },
     "top_signatures": [
       [
@@ -413,13 +413,6 @@
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "03:58:12",
-        "severity": 2,
-        "signature": "ET COMPROMISED Known Compromised or Hostile Host Traffic group 14",
-        "src_ip": "45.139.122.80",
-        "dest_port": 8000
-      },
       {
         "time": "04:05:36",
         "severity": 2,
@@ -552,12 +545,19 @@
         "signature": "ET CINS Active Threat Intelligence Poor Reputation IP group 133",
         "src_ip": "89.248.163.200",
         "dest_port": 8000
+      },
+      {
+        "time": "05:29:42",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "80.94.92.168",
+        "dest_port": 22
       }
     ]
   },
   "dshield": {
-    "total_connections": 182,
-    "unique_ips": 85,
+    "total_connections": 185,
+    "unique_ips": 86,
     "top_src_ips": [
       [
         "80.94.92.184",
@@ -603,30 +603,18 @@
     "top_dest_ports": [
       [
         "22",
-        102
+        103
       ],
       [
         "8443",
-        48
+        49
       ],
       [
         "8000",
-        32
+        33
       ]
     ],
     "recent_connections": [
-      {
-        "src_ip": "49.51.161.251",
-        "dest_port": "8443"
-      },
-      {
-        "src_ip": "49.51.161.251",
-        "dest_port": "8443"
-      },
-      {
-        "src_ip": "141.98.11.41",
-        "dest_port": "22"
-      },
       {
         "src_ip": "45.139.122.80",
         "dest_port": "8443"
@@ -694,6 +682,18 @@
       {
         "src_ip": "89.248.163.200",
         "dest_port": "8000"
+      },
+      {
+        "src_ip": "46.225.24.235",
+        "dest_port": "8000"
+      },
+      {
+        "src_ip": "138.246.253.137",
+        "dest_port": "8443"
+      },
+      {
+        "src_ip": "80.94.92.168",
+        "dest_port": "22"
       }
     ]
   }
