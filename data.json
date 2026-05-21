@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-05-21T06:10:01.810514+00:00",
-  "last_updated_local": "2026-05-20 23:10:01 PDT",
+  "last_updated": "2026-05-21T06:15:01.422569+00:00",
+  "last_updated_local": "2026-05-20 23:15:01 PDT",
   "cowrie": {
-    "total_connections": 160,
+    "total_connections": 161,
     "total_login_attempts": 67,
     "successful_logins": 13,
-    "unique_ips": 58,
+    "unique_ips": 59,
     "top_usernames": [
       [
         "root",
@@ -384,7 +384,7 @@
       ],
       [
         "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        79
+        77
       ],
       [
         "ET COMPROMISED Known Compromised or Hostile Host Traffic group 14",
@@ -411,11 +411,11 @@
         8
       ],
       [
-        "ET DROP Spamhaus DROP Listed Traffic Inbound group 11",
+        "SURICATA SSH invalid banner",
         6
       ],
       [
-        "ET DROP Spamhaus DROP Listed Traffic Inbound group 36",
+        "ET DROP Spamhaus DROP Listed Traffic Inbound group 11",
         6
       ]
     ],
@@ -430,7 +430,7 @@
       ],
       [
         "80.94.92.186",
-        32
+        30
       ],
       [
         "45.148.10.67",
@@ -462,20 +462,6 @@
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "21:58:29",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "80.94.92.171",
-        "dest_port": 22
-      },
-      {
-        "time": "22:00:29",
-        "severity": 2,
-        "signature": "ET DROP Dshield Block Listed Source group 1",
-        "src_ip": "87.251.64.149",
-        "dest_port": 22
-      },
       {
         "time": "22:01:45",
         "severity": 3,
@@ -601,12 +587,26 @@
         "signature": "ET DROP Dshield Block Listed Source group 1",
         "src_ip": "5.61.209.33",
         "dest_port": 8000
+      },
+      {
+        "time": "23:13:33",
+        "severity": 3,
+        "signature": "SURICATA SSH invalid banner",
+        "src_ip": "3.130.168.2",
+        "dest_port": 22
+      },
+      {
+        "time": "23:13:33",
+        "severity": 3,
+        "signature": "SURICATA SSH invalid banner",
+        "src_ip": "192.168.1.250",
+        "dest_port": 36448
       }
     ]
   },
   "dshield": {
-    "total_connections": 593,
-    "unique_ips": 261,
+    "total_connections": 594,
+    "unique_ips": 262,
     "top_src_ips": [
       [
         "45.139.122.80",
@@ -652,7 +652,7 @@
     "top_dest_ports": [
       [
         "22",
-        235
+        236
       ],
       [
         "8443",
@@ -664,10 +664,6 @@
       ]
     ],
     "recent_connections": [
-      {
-        "src_ip": "101.33.212.52",
-        "dest_port": "8000"
-      },
       {
         "src_ip": "101.33.212.52",
         "dest_port": "8000"
@@ -743,6 +739,10 @@
       {
         "src_ip": "34.38.92.57",
         "dest_port": "8000"
+      },
+      {
+        "src_ip": "3.130.168.2",
+        "dest_port": "22"
       }
     ]
   }
