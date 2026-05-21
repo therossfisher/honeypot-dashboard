@@ -1,26 +1,26 @@
 {
-  "last_updated": "2026-05-21T18:15:01.417522+00:00",
-  "last_updated_local": "2026-05-21 11:15:01 PDT",
+  "last_updated": "2026-05-21T18:20:02.155913+00:00",
+  "last_updated_local": "2026-05-21 11:20:02 PDT",
   "cowrie": {
-    "total_connections": 219,
-    "total_login_attempts": 193,
+    "total_connections": 221,
+    "total_login_attempts": 195,
     "successful_logins": 30,
     "unique_ips": 66,
     "top_usernames": [
       [
         "root",
-        32
+        33
       ],
       [
         "solv",
         25
       ],
       [
-        "admin",
-        21
+        "support",
+        22
       ],
       [
-        "support",
+        "admin",
         21
       ],
       [
@@ -51,7 +51,7 @@
     "top_passwords": [
       [
         "support",
-        14
+        15
       ],
       [
         "123456",
@@ -101,7 +101,7 @@
       ],
       [
         "87.251.64.176",
-        9
+        10
       ],
       [
         "98.41.156.214",
@@ -120,15 +120,15 @@
         5
       ],
       [
+        "165.154.6.69",
+        5
+      ],
+      [
         "87.251.64.149",
         4
       ],
       [
         "152.32.132.28",
-        4
-      ],
-      [
-        "76.145.117.38",
         4
       ]
     ],
@@ -198,20 +198,6 @@
       }
     ],
     "recent_attempts": [
-      {
-        "time": "08:50:35",
-        "ip": "76.105.131.239",
-        "username": "shipping",
-        "password": "shipping",
-        "success": false
-      },
-      {
-        "time": "08:52:28",
-        "ip": "76.119.136.122",
-        "username": "odoo",
-        "password": "odoo",
-        "success": true
-      },
       {
         "time": "08:53:16",
         "ip": "76.158.75.133",
@@ -337,23 +323,37 @@
         "username": "root",
         "password": "3245gs5662d34",
         "success": false
+      },
+      {
+        "time": "11:16:17",
+        "ip": "87.251.64.176",
+        "username": "support",
+        "password": "support",
+        "success": false
+      },
+      {
+        "time": "11:17:57",
+        "ip": "165.154.6.69",
+        "username": "root",
+        "password": "Test123!",
+        "success": false
       }
     ]
   },
   "suricata": {
-    "total_alerts": 445,
+    "total_alerts": 448,
     "alerts_by_severity": {
-      "3": 116,
-      "2": 329
+      "3": 117,
+      "2": 331
     },
     "top_signatures": [
       [
         "ET DROP Dshield Block Listed Source group 1",
-        102
+        103
       ],
       [
         "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        101
+        102
       ],
       [
         "ET COMPROMISED Known Compromised or Hostile Host Traffic group 14",
@@ -380,11 +380,11 @@
         7
       ],
       [
-        "ET CINS Active Threat Intelligence Poor Reputation IP group 57",
+        "ET DROP Spamhaus DROP Listed Traffic Inbound group 36",
         6
       ],
       [
-        "SURICATA SSH invalid banner",
+        "ET CINS Active Threat Intelligence Poor Reputation IP group 57",
         6
       ]
     ],
@@ -414,11 +414,11 @@
         15
       ],
       [
-        "2.57.122.238",
-        13
+        "87.251.64.176",
+        14
       ],
       [
-        "87.251.64.176",
+        "2.57.122.238",
         13
       ],
       [
@@ -431,27 +431,6 @@
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "10:04:44",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "54.236.228.135",
-        "dest_port": 22
-      },
-      {
-        "time": "10:04:50",
-        "severity": 2,
-        "signature": "ET CINS Active Threat Intelligence Poor Reputation IP group 2",
-        "src_ip": "3.86.245.199",
-        "dest_port": 8443
-      },
-      {
-        "time": "10:05:05",
-        "severity": 2,
-        "signature": "ET DROP Spamhaus DROP Listed Traffic Inbound group 7",
-        "src_ip": "45.148.10.230",
-        "dest_port": 22
-      },
       {
         "time": "10:05:05",
         "severity": 2,
@@ -570,12 +549,33 @@
         "signature": "ET DROP Dshield Block Listed Source group 1",
         "src_ip": "178.20.210.151",
         "dest_port": 22
+      },
+      {
+        "time": "11:16:16",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "87.251.64.176",
+        "dest_port": 22
+      },
+      {
+        "time": "11:16:24",
+        "severity": 2,
+        "signature": "ET DROP Spamhaus DROP Listed Traffic Inbound group 36",
+        "src_ip": "176.65.139.254",
+        "dest_port": 8000
+      },
+      {
+        "time": "11:16:24",
+        "severity": 2,
+        "signature": "ET DROP Dshield Block Listed Source group 1",
+        "src_ip": "176.65.139.254",
+        "dest_port": 8000
       }
     ]
   },
   "dshield": {
-    "total_connections": 437,
-    "unique_ips": 184,
+    "total_connections": 440,
+    "unique_ips": 185,
     "top_src_ips": [
       [
         "80.94.92.184",
@@ -599,7 +599,7 @@
       ],
       [
         "87.251.64.176",
-        9
+        10
       ],
       [
         "46.151.178.13",
@@ -621,7 +621,7 @@
     "top_dest_ports": [
       [
         "22",
-        261
+        263
       ],
       [
         "8443",
@@ -629,22 +629,10 @@
       ],
       [
         "8000",
-        82
+        83
       ]
     ],
     "recent_connections": [
-      {
-        "src_ip": "203.57.235.233",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "45.142.154.10",
-        "dest_port": "8443"
-      },
-      {
-        "src_ip": "45.139.122.80",
-        "dest_port": "8443"
-      },
       {
         "src_ip": "87.251.64.176",
         "dest_port": "22"
@@ -711,6 +699,18 @@
       },
       {
         "src_ip": "27.41.244.14",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "87.251.64.176",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "176.65.139.254",
+        "dest_port": "8000"
+      },
+      {
+        "src_ip": "165.154.6.69",
         "dest_port": "22"
       }
     ]
