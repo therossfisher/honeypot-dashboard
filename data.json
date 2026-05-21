@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-21T07:40:01.299714+00:00",
-  "last_updated_local": "2026-05-21 00:40:01 PDT",
+  "last_updated": "2026-05-21T07:45:01.779082+00:00",
+  "last_updated_local": "2026-05-21 00:45:01 PDT",
   "cowrie": {
     "total_connections": 3,
     "total_login_attempts": 2,
@@ -51,15 +51,15 @@
     ]
   },
   "suricata": {
-    "total_alerts": 420,
+    "total_alerts": 421,
     "alerts_by_severity": {
-      "2": 358,
+      "2": 359,
       "3": 62
     },
     "top_signatures": [
       [
         "ET DROP Dshield Block Listed Source group 1",
-        108
+        109
       ],
       [
         "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
@@ -141,20 +141,6 @@
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "23:54:24",
-        "severity": 2,
-        "signature": "ET DROP Spamhaus DROP Listed Traffic Inbound group 7",
-        "src_ip": "45.148.10.67",
-        "dest_port": 8000
-      },
-      {
-        "time": "23:54:24",
-        "severity": 2,
-        "signature": "ET DROP Dshield Block Listed Source group 1",
-        "src_ip": "45.148.10.67",
-        "dest_port": 8000
-      },
       {
         "time": "23:55:52",
         "severity": 3,
@@ -280,12 +266,26 @@
         "signature": "ET COMPROMISED Known Compromised or Hostile Host Traffic group 14",
         "src_ip": "45.139.122.80",
         "dest_port": 8443
+      },
+      {
+        "time": "00:44:03",
+        "severity": 2,
+        "signature": "ET DROP Dshield Block Listed Source group 1",
+        "src_ip": "45.205.1.71",
+        "dest_port": 8443
+      },
+      {
+        "time": "00:44:03",
+        "severity": 2,
+        "signature": "ET CINS Active Threat Intelligence Poor Reputation IP group 57",
+        "src_ip": "45.205.1.71",
+        "dest_port": 8443
       }
     ]
   },
   "dshield": {
-    "total_connections": 15,
-    "unique_ips": 14,
+    "total_connections": 16,
+    "unique_ips": 15,
     "top_src_ips": [
       [
         "45.148.10.67",
@@ -331,7 +331,7 @@
     "top_dest_ports": [
       [
         "8443",
-        7
+        8
       ],
       [
         "8000",
@@ -402,6 +402,10 @@
       {
         "src_ip": "110.35.80.116",
         "dest_port": "8000"
+      },
+      {
+        "src_ip": "45.205.1.71",
+        "dest_port": "8443"
       }
     ]
   }
