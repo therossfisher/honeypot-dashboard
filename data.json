@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-21T08:40:01.182941+00:00",
-  "last_updated_local": "2026-05-21 01:40:01 PDT",
+  "last_updated": "2026-05-21T08:45:02.060826+00:00",
+  "last_updated_local": "2026-05-21 01:45:02 PDT",
   "cowrie": {
     "total_connections": 25,
     "total_login_attempts": 16,
@@ -243,15 +243,15 @@
     ]
   },
   "suricata": {
-    "total_alerts": 450,
+    "total_alerts": 453,
     "alerts_by_severity": {
-      "2": 368,
+      "2": 371,
       "3": 82
     },
     "top_signatures": [
       [
         "ET DROP Dshield Block Listed Source group 1",
-        114
+        115
       ],
       [
         "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
@@ -286,8 +286,8 @@
         7
       ],
       [
-        "ET CINS Active Threat Intelligence Poor Reputation IP group 131",
-        6
+        "ET CINS Active Threat Intelligence Poor Reputation IP group 57",
+        7
       ]
     ],
     "top_src_ips": [
@@ -328,32 +328,11 @@
         13
       ],
       [
-        "45.148.10.230",
+        "45.198.224.9",
         10
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "01:05:48",
-        "severity": 2,
-        "signature": "ET DROP Dshield Block Listed Source group 1",
-        "src_ip": "87.251.64.149",
-        "dest_port": 22
-      },
-      {
-        "time": "01:07:57",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "2.57.122.238",
-        "dest_port": 22
-      },
-      {
-        "time": "01:10:12",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "2.57.122.238",
-        "dest_port": 22
-      },
       {
         "time": "01:12:27",
         "severity": 3,
@@ -472,12 +451,33 @@
         "signature": "ET DROP Dshield Block Listed Source group 1",
         "src_ip": "64.62.156.56",
         "dest_port": 8000
+      },
+      {
+        "time": "01:42:58",
+        "severity": 2,
+        "signature": "ET CINS Active Threat Intelligence Poor Reputation IP group 207",
+        "src_ip": "156.238.236.179",
+        "dest_port": 22
+      },
+      {
+        "time": "01:44:43",
+        "severity": 2,
+        "signature": "ET DROP Dshield Block Listed Source group 1",
+        "src_ip": "45.198.224.9",
+        "dest_port": 8443
+      },
+      {
+        "time": "01:44:43",
+        "severity": 2,
+        "signature": "ET CINS Active Threat Intelligence Poor Reputation IP group 57",
+        "src_ip": "45.198.224.9",
+        "dest_port": 8443
       }
     ]
   },
   "dshield": {
-    "total_connections": 57,
-    "unique_ips": 36,
+    "total_connections": 59,
+    "unique_ips": 38,
     "top_src_ips": [
       [
         "2.57.122.238",
@@ -523,11 +523,11 @@
     "top_dest_ports": [
       [
         "22",
-        28
+        29
       ],
       [
         "8443",
-        16
+        17
       ],
       [
         "8000",
@@ -535,14 +535,6 @@
       ]
     ],
     "recent_connections": [
-      {
-        "src_ip": "2.57.122.238",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "109.248.170.188",
-        "dest_port": "8000"
-      },
       {
         "src_ip": "2.57.122.238",
         "dest_port": "22"
@@ -614,6 +606,14 @@
       {
         "src_ip": "64.62.156.56",
         "dest_port": "8000"
+      },
+      {
+        "src_ip": "156.238.236.179",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "45.198.224.9",
+        "dest_port": "8443"
       }
     ]
   }
