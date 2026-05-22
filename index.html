@@ -291,38 +291,7 @@
       <div class="panel-body" id="reports-list">
         <div class="loading">LOADING REPORTS</div>
       </div>
-    </div>
-
-    <!-- Row 1: SSH top lists -->
-    <div class="grid-3">
-      <div class="panel">
-        <div class="panel-header"><div class="panel-dot"></div><div class="panel-title">Top Usernames</div></div>
-        <div class="panel-body">
-          <table class="data-table" id="table-usernames">
-            <thead><tr><th>Username</th><th>Attempts</th></tr></thead>
-            <tbody></tbody>
-          </table>
-        </div>
-      </div>
-      <div class="panel">
-        <div class="panel-header"><div class="panel-dot"></div><div class="panel-title">Top Passwords</div></div>
-        <div class="panel-body">
-          <table class="data-table" id="table-passwords">
-            <thead><tr><th>Password</th><th>Attempts</th></tr></thead>
-            <tbody></tbody>
-          </table>
-        </div>
-      </div>
-      <div class="panel">
-        <div class="panel-header"><div class="panel-dot"></div><div class="panel-title">Top Attacker IPs</div></div>
-        <div class="panel-body">
-          <table class="data-table" id="table-ips">
-            <thead><tr><th>IP Address</th><th>Hits</th></tr></thead>
-            <tbody></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+    </div>    
 
     <!-- Row 2: Live feed + Suricata -->
     <div class="grid-2">
@@ -339,24 +308,25 @@
       </div>
     </div>
 
-    <!-- Row 3: Attacker sessions + Firewall -->
-    <div class="grid-2">
-      <div class="panel">
-        <div class="panel-header"><div class="panel-dot" style="background:var(--accent3);animation:blink 0.5s infinite;"></div><div class="panel-title">Attacker Sessions // Commands Run</div></div>
-        <div class="panel-body" id="attacker-sessions"><div class="loading">NO SESSIONS YET</div></div>
-      </div>
-      <div class="panel">
-        <div class="panel-header"><div class="panel-dot" style="background:var(--accent4)"></div><div class="panel-title">Top Targeted Ports</div></div>
-        <div class="panel-body" style="padding:12px 16px;">
-          <table class="data-table" id="table-ports">
-            <thead><tr><th>Port</th><th>Service</th><th>Hits</th></tr></thead>
-            <tbody></tbody>
-          </table>
-        </div>
+    <!-- Row 3: Top Targeted Ports (compact) -->
+    <div class="panel" style="margin-bottom:16px;">
+      <div class="panel-header"><div class="panel-dot" style="background:var(--accent4)"></div><div class="panel-title">Top Targeted Ports</div></div>
+      <div class="panel-body" style="padding:8px 16px;">
+        <table class="data-table" id="table-ports">
+          <thead><tr><th>Port</th><th>Service</th><th>Hits</th></tr></thead>
+          <tbody></tbody>
+        </table>
       </div>
     </div>
 
-    <!-- Row 4: Top Suricata signatures -->
+    <!-- Row 4: Attacker sessions -->
+    <div class="panel" style="margin-bottom:16px;">
+      <div class="panel-header"><div class="panel-dot" style="background:var(--accent3);animation:blink 0.5s infinite;"></div><div class="panel-title">Attacker Sessions // Commands Run</div></div>
+      <div class="panel-body" id="attacker-sessions"><div class="loading">NO SESSIONS YET</div></div>
+    </div>
+
+
+    <!-- Row 5: Top Suricata signatures -->
     <div class="panel" style="margin-bottom:16px;">
       <div class="panel-header"><div class="panel-dot" style="background:var(--accent3)"></div><div class="panel-title">Top Triggered Signatures</div></div>
       <div class="panel-body">
