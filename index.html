@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +19,9 @@
     --border: #1a3a5c;
     --glow: 0 0 20px rgba(0,255,157,0.15);
   }
- 
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
- 
+
   body {
     background: var(--bg);
     color: var(--text);
@@ -31,23 +30,16 @@
     min-height: 100vh;
     overflow-x: hidden;
   }
- 
-  /* Scanline effect */
+
   body::before {
     content: '';
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(0,0,0,0.03) 2px,
-      rgba(0,0,0,0.03) 4px
-    );
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
     pointer-events: none;
     z-index: 1000;
   }
- 
+
   header {
     background: var(--bg2);
     border-bottom: 1px solid var(--border);
@@ -59,7 +51,7 @@
     top: 0;
     z-index: 100;
   }
- 
+
   .logo {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 28px;
@@ -67,7 +59,7 @@
     color: var(--accent);
     text-shadow: var(--glow);
   }
- 
+
   .logo span {
     color: var(--text-dim);
     font-size: 14px;
@@ -76,7 +68,7 @@
     display: block;
     margin-top: -4px;
   }
- 
+
   .header-meta {
     text-align: right;
     font-family: 'Share Tech Mono', monospace;
@@ -84,31 +76,18 @@
     color: var(--text-dim);
     line-height: 1.8;
   }
- 
-  .header-meta .status {
-    color: var(--accent);
-    animation: blink 2s infinite;
-  }
- 
+
+  .header-meta .status { color: var(--accent); animation: blink 2s infinite; }
+
   @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.3; }
   }
- 
-  .main {
-    padding: 24px 32px;
-    max-width: 1600px;
-    margin: 0 auto;
-  }
- 
-  /* Stats row */
-  .stats-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-bottom: 24px;
-  }
- 
+
+  .main { padding: 24px 32px; max-width: 1600px; margin: 0 auto; }
+
+  .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+
   .stat-card {
     background: var(--bg2);
     border: 1px solid var(--border);
@@ -117,335 +96,168 @@
     overflow: hidden;
     transition: border-color 0.3s;
   }
- 
-  .stat-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 3px;
-    height: 100%;
-  }
- 
+
+  .stat-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; }
   .stat-card.green::before { background: var(--accent); }
   .stat-card.blue::before { background: var(--accent2); }
   .stat-card.red::before { background: var(--accent3); }
   .stat-card.yellow::before { background: var(--accent4); }
- 
   .stat-card:hover { border-color: var(--accent); }
- 
-  .stat-label {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
- 
-  .stat-value {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 48px;
-    line-height: 1;
-    letter-spacing: 2px;
-  }
- 
+
+  .stat-label { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--text-dim); text-transform: uppercase; margin-bottom: 8px; }
+
+  .stat-value { font-family: 'Bebas Neue', sans-serif; font-size: 48px; line-height: 1; letter-spacing: 2px; }
   .stat-card.green .stat-value { color: var(--accent); text-shadow: var(--glow); }
   .stat-card.blue .stat-value { color: var(--accent2); }
   .stat-card.red .stat-value { color: var(--accent3); }
   .stat-card.yellow .stat-value { color: var(--accent4); }
- 
-  .stat-sub {
-    font-size: 11px;
-    color: var(--text-dim);
-    margin-top: 4px;
-    font-family: 'Share Tech Mono', monospace;
-  }
- 
-  /* Grid layout */
-  .grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 16px;
-  }
- 
-  .grid-3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 16px;
-  }
- 
-  .panel {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    overflow: hidden;
-  }
- 
-  .panel-header {
-    background: var(--bg3);
-    border-bottom: 1px solid var(--border);
-    padding: 10px 16px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
- 
-  .panel-title {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--text-dim);
-  }
- 
-  .panel-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--accent);
-    animation: blink 2s infinite;
-  }
- 
-  .panel-body {
-    padding: 16px;
-  }
- 
-  /* Tables */
-  .data-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
- 
-  .data-table th {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 1px;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    text-align: left;
-    padding: 6px 8px;
-    border-bottom: 1px solid var(--border);
-  }
- 
-  .data-table td {
-    padding: 7px 8px;
-    border-bottom: 1px solid rgba(26,58,92,0.4);
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 12px;
-    color: var(--text);
-  }
- 
+
+  .stat-sub { font-size: 11px; color: var(--text-dim); margin-top: 4px; font-family: 'Share Tech Mono', monospace; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+
+  .panel { background: var(--bg2); border: 1px solid var(--border); overflow: hidden; }
+
+  .panel-header { background: var(--bg3); border-bottom: 1px solid var(--border); padding: 10px 16px; display: flex; align-items: center; gap: 8px; }
+
+  .panel-title { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-dim); }
+
+  .panel-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: blink 2s infinite; }
+
+  .panel-body { padding: 16px; }
+
+  .data-table { width: 100%; border-collapse: collapse; }
+  .data-table th { font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: 1px; color: var(--text-dim); text-transform: uppercase; text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); }
+  .data-table td { padding: 7px 8px; border-bottom: 1px solid rgba(26,58,92,0.4); font-family: 'Share Tech Mono', monospace; font-size: 12px; color: var(--text); }
   .data-table tr:last-child td { border-bottom: none; }
   .data-table tr:hover td { background: rgba(0,255,157,0.03); }
- 
-  .bar-cell {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
- 
-  .bar {
-    height: 4px;
-    background: var(--accent);
-    opacity: 0.6;
-    min-width: 2px;
-    transition: width 1s ease;
-  }
- 
+
+  .bar-cell { display: flex; align-items: center; gap: 8px; }
+  .bar { height: 4px; background: var(--accent); opacity: 0.6; min-width: 2px; transition: width 1s ease; }
   .bar.blue { background: var(--accent2); }
   .bar.red { background: var(--accent3); }
- 
-  .count {
-    color: var(--accent);
-    font-weight: 600;
-    min-width: 32px;
-    text-align: right;
-  }
- 
+
+  .count { color: var(--accent); font-weight: 600; min-width: 32px; text-align: right; }
   .count.blue { color: var(--accent2); }
   .count.red { color: var(--accent3); }
- 
-  /* Feed */
-  .feed {
-    max-height: 320px;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--border) transparent;
-  }
- 
-  .feed-item {
-    display: grid;
-    grid-template-columns: 70px 120px 1fr;
-    gap: 8px;
-    padding: 7px 0;
-    border-bottom: 1px solid rgba(26,58,92,0.4);
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 11px;
-    align-items: center;
-    animation: fadeIn 0.5s ease;
-  }
- 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateX(-4px); }
-    to { opacity: 1; transform: translateX(0); }
-  }
- 
+
+  .feed { max-height: 320px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+
+  .feed-item { display: grid; grid-template-columns: 70px 120px 1fr; gap: 8px; padding: 7px 0; border-bottom: 1px solid rgba(26,58,92,0.4); font-family: 'Share Tech Mono', monospace; font-size: 11px; align-items: center; animation: fadeIn 0.5s ease; }
+
+  @keyframes fadeIn { from { opacity: 0; transform: translateX(-4px); } to { opacity: 1; transform: translateX(0); } }
+
   .feed-item:last-child { border-bottom: none; }
- 
   .feed-time { color: var(--text-dim); }
   .feed-ip { color: var(--accent2); }
   .feed-data { color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
- 
-  .badge {
-    display: inline-block;
-    padding: 1px 6px;
-    font-size: 9px;
-    letter-spacing: 1px;
-    border-radius: 2px;
-    font-family: 'Share Tech Mono', monospace;
-  }
- 
+
+  .badge { display: inline-block; padding: 1px 6px; font-size: 9px; letter-spacing: 1px; border-radius: 2px; font-family: 'Share Tech Mono', monospace; }
   .badge-success { background: rgba(0,255,157,0.15); color: var(--accent); }
   .badge-fail { background: rgba(255,77,109,0.15); color: var(--accent3); }
   .badge-sev1 { background: rgba(255,77,109,0.2); color: var(--accent3); }
   .badge-sev2 { background: rgba(255,209,102,0.2); color: var(--accent4); }
   .badge-sev3 { background: rgba(0,184,255,0.15); color: var(--accent2); }
- 
-  /* Commands panel */
-  .cmd-session {
-    background: var(--bg3);
-    border: 1px solid var(--border);
-    padding: 12px;
-    margin-bottom: 10px;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 11px;
-  }
- 
+
+  .cmd-session { background: var(--bg3); border: 1px solid var(--border); padding: 12px; margin-bottom: 10px; font-family: 'Share Tech Mono', monospace; font-size: 11px; }
   .cmd-session:last-child { margin-bottom: 0; }
- 
-  .cmd-header {
-    color: var(--accent3);
-    margin-bottom: 8px;
-    font-size: 10px;
-    letter-spacing: 1px;
-  }
- 
-  .cmd-line {
-    color: var(--accent);
-    padding: 2px 0;
-  }
- 
-  .cmd-line::before {
-    content: '$ ';
-    color: var(--text-dim);
-  }
- 
-  /* Loading state */
-  .loading {
-    text-align: center;
-    padding: 40px;
-    font-family: 'Share Tech Mono', monospace;
-    color: var(--text-dim);
-    font-size: 12px;
-    letter-spacing: 2px;
-  }
- 
-  .loading::after {
-    content: '_';
-    animation: blink 1s infinite;
-  }
- 
-  /* Severity bars */
-  .sev-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
- 
-  .sev-label {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 10px;
-    width: 60px;
-    color: var(--text-dim);
-  }
- 
-  .sev-bar-wrap {
-    flex: 1;
-    height: 16px;
-    background: rgba(255,255,255,0.03);
-    position: relative;
-  }
- 
-  .sev-bar-fill {
-    height: 100%;
-    transition: width 1s ease;
-    display: flex;
-    align-items: center;
-    padding-left: 6px;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 10px;
-  }
- 
+  .cmd-header { color: var(--accent3); margin-bottom: 8px; font-size: 10px; letter-spacing: 1px; }
+  .cmd-line { color: var(--accent); padding: 2px 0; }
+  .cmd-line::before { content: '$ '; color: var(--text-dim); }
+
+  .loading { text-align: center; padding: 40px; font-family: 'Share Tech Mono', monospace; color: var(--text-dim); font-size: 12px; letter-spacing: 2px; }
+  .loading::after { content: '_'; animation: blink 1s infinite; }
+
+  .sev-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .sev-label { font-family: 'Share Tech Mono', monospace; font-size: 10px; width: 60px; color: var(--text-dim); }
+  .sev-bar-wrap { flex: 1; height: 16px; background: rgba(255,255,255,0.03); position: relative; }
+  .sev-bar-fill { height: 100%; transition: width 1s ease; display: flex; align-items: center; padding-left: 6px; font-family: 'Share Tech Mono', monospace; font-size: 10px; }
   .sev1 { background: rgba(255,77,109,0.4); color: var(--accent3); }
   .sev2 { background: rgba(255,209,102,0.3); color: var(--accent4); }
   .sev3 { background: rgba(0,184,255,0.25); color: var(--accent2); }
- 
-  /* Footer */
-  footer {
-    margin-top: 32px;
-    padding: 16px 32px;
-    border-top: 1px solid var(--border);
+
+  /* Reports */
+  .report-card {
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 10px;
-    color: var(--text-dim);
-    letter-spacing: 1px;
+    gap: 16px;
   }
- 
-  .error-msg {
-    color: var(--accent3);
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 12px;
-    padding: 20px;
-    text-align: center;
-  }
- 
+  .report-card:last-child { border-bottom: none; }
+  .report-date { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 4px; }
+  .report-title { color: var(--accent2); font-size: 14px; margin-bottom: 6px; }
+  .report-summary { color: var(--text-dim); font-size: 12px; line-height: 1.6; }
+  .report-btn { white-space: nowrap; background: none; border: 1px solid var(--accent2); color: var(--accent2); padding: 8px 16px; cursor: pointer; font-family: 'Share Tech Mono', monospace; font-size: 10px; letter-spacing: 1px; flex-shrink: 0; transition: all 0.2s; }
+  .report-btn:hover { background: rgba(0,184,255,0.1); }
+
+  /* Report Modal */
+  .report-modal { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.9); z-index: 500; overflow-y: auto; padding: 40px 20px; }
+  .report-modal-inner { max-width: 900px; margin: 0 auto; background: var(--bg2); border: 1px solid var(--border); padding: 32px; }
+  .report-modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+  .report-modal-label { font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: 2px; color: var(--text-dim); }
+  .report-close-btn { background: none; border: 1px solid var(--border); color: var(--text-dim); padding: 6px 12px; cursor: pointer; font-family: 'Share Tech Mono', monospace; font-size: 11px; letter-spacing: 1px; }
+  .report-close-btn:hover { border-color: var(--accent3); color: var(--accent3); }
+  .report-body { color: var(--text); line-height: 1.8; font-size: 14px; }
+  .report-body h1 { color: var(--accent); font-family: 'Bebas Neue', sans-serif; font-size: 36px; letter-spacing: 2px; margin-bottom: 8px; }
+  .report-body h2 { color: var(--accent2); font-family: 'Share Tech Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin: 28px 0 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  .report-body h3 { color: var(--text); font-size: 14px; margin: 16px 0 8px; }
+  .report-body p { margin-bottom: 12px; }
+  .report-body strong { color: var(--accent4); }
+  .report-body em { color: var(--text-dim); font-style: italic; }
+  .report-body code { background: var(--bg3); color: var(--accent); padding: 2px 6px; font-family: 'Share Tech Mono', monospace; font-size: 12px; }
+  .report-body pre { background: var(--bg3); border: 1px solid var(--border); padding: 16px; margin: 12px 0; overflow-x: auto; }
+  .report-body pre code { background: none; padding: 0; }
+  .report-body a { color: var(--accent2); text-decoration: none; }
+  .report-body a:hover { text-decoration: underline; }
+  .report-body hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+  .report-body ul { margin: 8px 0 12px 20px; }
+  .report-body li { padding: 3px 0; }
+  .report-body table { width: 100%; border-collapse: collapse; margin: 12px 0; font-family: 'Share Tech Mono', monospace; font-size: 11px; }
+  .report-body table th { background: var(--bg3); color: var(--text-dim); padding: 8px; text-align: left; border: 1px solid var(--border); }
+  .report-body table td { padding: 8px; border: 1px solid var(--border); word-break: break-all; }
+  .report-body table tr:hover td { background: rgba(0,255,157,0.03); }
+  .report-body .meta { font-family: 'Share Tech Mono', monospace; font-size: 11px; color: var(--text-dim); margin-bottom: 4px; }
+
+  footer { margin-top: 32px; padding: 16px 32px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--text-dim); letter-spacing: 1px; }
+
+  .error-msg { color: var(--accent3); font-family: 'Share Tech Mono', monospace; font-size: 12px; padding: 20px; text-align: center; }
+
   @media (max-width: 1200px) {
     .stats-row { grid-template-columns: repeat(2, 1fr); }
     .grid-3 { grid-template-columns: 1fr 1fr; }
   }
- 
+
   @media (max-width: 768px) {
     .main { padding: 16px; }
     .stats-row { grid-template-columns: 1fr 1fr; }
     .grid-2, .grid-3 { grid-template-columns: 1fr; }
     header { padding: 12px 16px; }
+    .report-card { flex-direction: column; }
   }
 </style>
 </head>
 <body>
- 
+
 <header>
   <div class="logo">
     PISNORT
     <span>// THREAT INTELLIGENCE DASHBOARD</span>
   </div>
   <div class="header-meta">
-    <div>SENSOR: REDACTED </div>
+    <div>SENSOR: REDACTED // SAN DIEGO, CA</div>
     <div>CONTRIBUTING TO SANS INTERNET STORM CENTER</div>
     <div id="last-updated">LOADING DATA</div>
     <div class="status">● LIVE</div>
   </div>
 </header>
- 
+
 <div class="main">
- 
   <div id="loading" class="loading">INITIALIZING SENSOR DATA</div>
   <div id="dashboard" style="display:none">
- 
+
     <!-- Stat Cards -->
     <div class="stats-row">
       <div class="stat-card green">
@@ -469,14 +281,11 @@
         <div class="stat-sub">unique source IPs</div>
       </div>
     </div>
- 
+
     <!-- Row 1: SSH top lists -->
     <div class="grid-3">
       <div class="panel">
-        <div class="panel-header">
-          <div class="panel-dot"></div>
-          <div class="panel-title">Top Usernames</div>
-        </div>
+        <div class="panel-header"><div class="panel-dot"></div><div class="panel-title">Top Usernames</div></div>
         <div class="panel-body">
           <table class="data-table" id="table-usernames">
             <thead><tr><th>Username</th><th>Attempts</th></tr></thead>
@@ -484,12 +293,8 @@
           </table>
         </div>
       </div>
- 
       <div class="panel">
-        <div class="panel-header">
-          <div class="panel-dot"></div>
-          <div class="panel-title">Top Passwords</div>
-        </div>
+        <div class="panel-header"><div class="panel-dot"></div><div class="panel-title">Top Passwords</div></div>
         <div class="panel-body">
           <table class="data-table" id="table-passwords">
             <thead><tr><th>Password</th><th>Attempts</th></tr></thead>
@@ -497,12 +302,8 @@
           </table>
         </div>
       </div>
- 
       <div class="panel">
-        <div class="panel-header">
-          <div class="panel-dot"></div>
-          <div class="panel-title">Top Attacker IPs</div>
-        </div>
+        <div class="panel-header"><div class="panel-dot"></div><div class="panel-title">Top Attacker IPs</div></div>
         <div class="panel-body">
           <table class="data-table" id="table-ips">
             <thead><tr><th>IP Address</th><th>Hits</th></tr></thead>
@@ -511,48 +312,30 @@
         </div>
       </div>
     </div>
- 
+
     <!-- Row 2: Live feed + Suricata -->
     <div class="grid-2">
       <div class="panel">
-        <div class="panel-header">
-          <div class="panel-dot"></div>
-          <div class="panel-title">Live SSH Feed</div>
-        </div>
-        <div class="panel-body">
-          <div class="feed" id="feed-ssh"></div>
-        </div>
+        <div class="panel-header"><div class="panel-dot"></div><div class="panel-title">Live SSH Feed</div></div>
+        <div class="panel-body"><div class="feed" id="feed-ssh"></div></div>
       </div>
- 
       <div class="panel">
-        <div class="panel-header">
-          <div class="panel-dot" style="background:var(--accent3)"></div>
-          <div class="panel-title">Suricata IDS Alerts</div>
-        </div>
+        <div class="panel-header"><div class="panel-dot" style="background:var(--accent3)"></div><div class="panel-title">Suricata IDS Alerts</div></div>
         <div class="panel-body">
           <div id="sev-bars" style="margin-bottom:16px;"></div>
           <div class="feed" id="feed-alerts"></div>
         </div>
       </div>
     </div>
- 
+
     <!-- Row 3: Attacker sessions + Firewall -->
     <div class="grid-2">
       <div class="panel">
-        <div class="panel-header">
-          <div class="panel-dot" style="background:var(--accent3); animation: blink 0.5s infinite;"></div>
-          <div class="panel-title">Attacker Sessions // Commands Run</div>
-        </div>
-        <div class="panel-body" id="attacker-sessions">
-          <div class="loading">NO SESSIONS YET</div>
-        </div>
+        <div class="panel-header"><div class="panel-dot" style="background:var(--accent3);animation:blink 0.5s infinite;"></div><div class="panel-title">Attacker Sessions // Commands Run</div></div>
+        <div class="panel-body" id="attacker-sessions"><div class="loading">NO SESSIONS YET</div></div>
       </div>
- 
       <div class="panel">
-        <div class="panel-header">
-          <div class="panel-dot" style="background:var(--accent4)"></div>
-          <div class="panel-title">Top Targeted Ports</div>
-        </div>
+        <div class="panel-header"><div class="panel-dot" style="background:var(--accent4)"></div><div class="panel-title">Top Targeted Ports</div></div>
         <div class="panel-body">
           <table class="data-table" id="table-ports">
             <thead><tr><th>Port</th><th>Service</th><th>Hits</th></tr></thead>
@@ -561,13 +344,10 @@
         </div>
       </div>
     </div>
- 
+
     <!-- Row 4: Top Suricata signatures -->
     <div class="panel" style="margin-bottom:16px;">
-      <div class="panel-header">
-        <div class="panel-dot" style="background:var(--accent3)"></div>
-        <div class="panel-title">Top Triggered Signatures</div>
-      </div>
+      <div class="panel-header"><div class="panel-dot" style="background:var(--accent3)"></div><div class="panel-title">Top Triggered Signatures</div></div>
       <div class="panel-body">
         <table class="data-table" id="table-sigs">
           <thead><tr><th>Signature</th><th>Count</th></tr></thead>
@@ -575,42 +355,57 @@
         </table>
       </div>
     </div>
- 
+
+    <!-- Row 5: Threat Intelligence Reports -->
+    <div class="panel" style="margin-bottom:16px;">
+      <div class="panel-header">
+        <div class="panel-dot" style="background:var(--accent2)"></div>
+        <div class="panel-title">Threat Intelligence Reports</div>
+      </div>
+      <div class="panel-body" id="reports-list">
+        <div class="loading">LOADING REPORTS</div>
+      </div>
+    </div>
+
   </div>
 </div>
- 
+
+<!-- Report Modal -->
+<div class="report-modal" id="report-modal">
+  <div class="report-modal-inner">
+    <div class="report-modal-header">
+      <div class="report-modal-label">// THREAT INTELLIGENCE REPORT</div>
+      <button class="report-close-btn" onclick="closeReport()">✕ CLOSE</button>
+    </div>
+    <div class="report-body" id="report-content"></div>
+  </div>
+</div>
+
 <footer>
   <div>PISNORT // RASPBERRY PI 4 + SURICATA 7 + DSHIELD HONEYPOT // SANS ISC SENSOR</div>
-  <div>therossfisher.com // DATA REFRESHES EVERY 5 MINUTES</div>
+  <div>dashboard.therossfisher.xyz // DATA REFRESHES EVERY 5 MINUTES</div>
 </footer>
- 
+
 <script>
 const KNOWN_PORTS = {
-  "22": "SSH", "23": "Telnet", "80": "HTTP", "443": "HTTPS",
-  "8000": "HTTP-Alt", "8080": "HTTP-Proxy", "8443": "HTTPS-Alt",
-  "3389": "RDP", "21": "FTP", "25": "SMTP", "3306": "MySQL",
-  "5900": "VNC", "6379": "Redis", "27017": "MongoDB",
-  "7547": "TR-069", "5555": "ADB", "9000": "PHP-FPM",
-  "2323": "Telnet-Alt", "445": "SMB"
+  "22":"SSH","23":"Telnet","80":"HTTP","443":"HTTPS","8000":"HTTP-Alt",
+  "8080":"HTTP-Proxy","8443":"HTTPS-Alt","3389":"RDP","21":"FTP","25":"SMTP",
+  "3306":"MySQL","5900":"VNC","6379":"Redis","27017":"MongoDB","7547":"TR-069",
+  "5555":"ADB","9000":"PHP-FPM","2323":"Telnet-Alt","445":"SMB"
 };
- 
+
 function maxVal(arr) {
   if (!arr || arr.length === 0) return 1;
   return Math.max(...arr.map(i => i[1])) || 1;
 }
- 
-function makeBar(val, max, cls = '') {
-  const pct = Math.round((val / max) * 120);
-  return `<div class="bar-cell"><div class="bar ${cls}" style="width:${pct}px"></div></div>`;
-}
- 
+
 function severityLabel(s) {
   if (s == 1) return '<span class="badge badge-sev1">CRITICAL</span>';
   if (s == 2) return '<span class="badge badge-sev2">MEDIUM</span>';
   return '<span class="badge badge-sev3">LOW</span>';
 }
- 
-function renderTable(id, rows, maxVal, barClass, cols) {
+
+function renderTable(id, rows, max, barClass, cols) {
   const tbody = document.querySelector(`#${id} tbody`);
   if (!tbody) return;
   if (!rows || rows.length === 0) {
@@ -622,85 +417,51 @@ function renderTable(id, rows, maxVal, barClass, cols) {
       <td>${label}</td>
       <td>
         <div class="bar-cell">
-          <div class="bar ${barClass}" style="width:${Math.round((count/maxVal)*120)}px"></div>
+          <div class="bar ${barClass}" style="width:${Math.round((count/max)*120)}px"></div>
           <span class="count ${barClass}">${count}</span>
         </div>
       </td>
     </tr>
   `).join('');
 }
- 
+
 function renderDashboard(data) {
   const c = data.cowrie;
   const s = data.suricata;
   const d = data.dshield;
- 
-  // Update last updated
-  document.getElementById('last-updated').textContent =
-    'UPDATED: ' + (data.last_updated_local || data.last_updated);
- 
-  // Stat cards
-  document.getElementById('stat-ssh-attempts').textContent =
-    (c.total_login_attempts || 0).toLocaleString();
-  document.getElementById('stat-ssh-sub').textContent =
-    `${c.successful_logins || 0} successful // ${c.unique_ips || 0} unique IPs`;
-  document.getElementById('stat-alerts').textContent =
-    (s.total_alerts || 0).toLocaleString();
-  document.getElementById('stat-fw').textContent =
-    (d.total_connections || 0).toLocaleString();
-  document.getElementById('stat-ips').textContent =
-    (d.unique_ips || 0).toLocaleString();
- 
-  // Top usernames, passwords, IPs
-  const maxU = maxVal(c.top_usernames);
-  const maxP = maxVal(c.top_passwords);
-  const maxI = maxVal(c.top_ips);
- 
-  renderTable('table-usernames', c.top_usernames, maxU, '', 2);
-  renderTable('table-passwords', c.top_passwords, maxP, '', 2);
-  renderTable('table-ips', c.top_ips, maxI, 'blue', 2);
- 
-  // SSH live feed
+
+  document.getElementById('last-updated').textContent = 'UPDATED: ' + (data.last_updated_local || data.last_updated);
+  document.getElementById('stat-ssh-attempts').textContent = (c.total_login_attempts || 0).toLocaleString();
+  document.getElementById('stat-ssh-sub').textContent = `${c.successful_logins || 0} successful // ${c.unique_ips || 0} unique IPs`;
+  document.getElementById('stat-alerts').textContent = (s.total_alerts || 0).toLocaleString();
+  document.getElementById('stat-fw').textContent = (d.total_connections || 0).toLocaleString();
+  document.getElementById('stat-ips').textContent = (d.unique_ips || 0).toLocaleString();
+
+  renderTable('table-usernames', c.top_usernames, maxVal(c.top_usernames), '', 2);
+  renderTable('table-passwords', c.top_passwords, maxVal(c.top_passwords), '', 2);
+  renderTable('table-ips', c.top_ips, maxVal(c.top_ips), 'blue', 2);
+
   const sshFeed = document.getElementById('feed-ssh');
   if (c.recent_attempts && c.recent_attempts.length > 0) {
     sshFeed.innerHTML = [...c.recent_attempts].reverse().map(a => `
       <div class="feed-item">
         <span class="feed-time">${a.time}</span>
         <span class="feed-ip">${a.ip}</span>
-        <span class="feed-data">
-          ${a.username}:<span style="color:var(--text-dim)">${a.password}</span>
-          &nbsp;${a.success ?
-            '<span class="badge badge-success">LOGIN OK</span>' :
-            '<span class="badge badge-fail">FAILED</span>'}
-        </span>
+        <span class="feed-data">${a.username}:<span style="color:var(--text-dim)">${a.password}</span>&nbsp;${a.success ? '<span class="badge badge-success">LOGIN OK</span>' : '<span class="badge badge-fail">FAILED</span>'}</span>
       </div>
     `).join('');
   } else {
     sshFeed.innerHTML = '<div class="loading">AWAITING CONNECTIONS</div>';
   }
- 
-  // Suricata severity bars
-  const sevBars = document.getElementById('sev-bars');
+
   const sevData = s.alerts_by_severity || {};
   const totalAlerts = s.total_alerts || 1;
-  sevBars.innerHTML = [
-    ['1', 'CRITICAL', 'sev1'],
-    ['2', 'MEDIUM', 'sev2'],
-    ['3', 'LOW', 'sev3']
-  ].map(([k, label, cls]) => {
+  document.getElementById('sev-bars').innerHTML = [['1','CRITICAL','sev1'],['2','MEDIUM','sev2'],['3','LOW','sev3']].map(([k,label,cls]) => {
     const count = sevData[k] || 0;
-    const pct = Math.round((count / totalAlerts) * 100);
-    return `
-      <div class="sev-row">
-        <div class="sev-label">${label}</div>
-        <div class="sev-bar-wrap">
-          <div class="sev-bar-fill ${cls}" style="width:${pct}%">${count > 0 ? count : ''}</div>
-        </div>
-      </div>
-    `;
+    const pct = Math.round((count/totalAlerts)*100);
+    return `<div class="sev-row"><div class="sev-label">${label}</div><div class="sev-bar-wrap"><div class="sev-bar-fill ${cls}" style="width:${pct}%">${count > 0 ? count : ''}</div></div></div>`;
   }).join('');
- 
-  // Suricata alerts feed
+
   const alertsFeed = document.getElementById('feed-alerts');
   if (s.recent_alerts && s.recent_alerts.length > 0) {
     alertsFeed.innerHTML = [...s.recent_alerts].reverse().map(a => `
@@ -713,25 +474,19 @@ function renderDashboard(data) {
   } else {
     alertsFeed.innerHTML = '<div class="loading">NO ALERTS TODAY</div>';
   }
- 
-  // Attacker sessions
+
   const sessions = document.getElementById('attacker-sessions');
   if (c.attacker_sessions && c.attacker_sessions.length > 0) {
     sessions.innerHTML = c.attacker_sessions.map(sess => `
       <div class="cmd-session">
-        <div class="cmd-header">
-          [${sess.time}] ${sess.ip} // LOGIN: ${sess.username}:${sess.password}
-        </div>
-        ${sess.commands.map(cmd =>
-          `<div class="cmd-line">${cmd.replace(/</g,'&lt;').substring(0,120)}</div>`
-        ).join('')}
+        <div class="cmd-header">[${sess.time}] ${sess.ip} // LOGIN: ${sess.username}:${sess.password}</div>
+        ${sess.commands.map(cmd => `<div class="cmd-line">${cmd.replace(/</g,'&lt;').substring(0,120)}</div>`).join('')}
       </div>
     `).join('');
   } else {
     sessions.innerHTML = '<div style="color:var(--text-dim);font-family:\'Share Tech Mono\',monospace;font-size:11px;padding:20px;text-align:center;">NO SUCCESSFUL INTRUSIONS TODAY</div>';
   }
- 
-  // Top ports
+
   const maxPort = maxVal(d.top_dest_ports);
   const portsTbody = document.querySelector('#table-ports tbody');
   if (d.top_dest_ports && d.top_dest_ports.length > 0) {
@@ -739,38 +494,101 @@ function renderDashboard(data) {
       <tr>
         <td style="color:var(--accent4)">${port}</td>
         <td style="color:var(--text-dim)">${KNOWN_PORTS[port] || 'Unknown'}</td>
-        <td>
-          <div class="bar-cell">
-            <div class="bar" style="background:var(--accent4);width:${Math.round((count/maxPort)*120)}px"></div>
-            <span class="count" style="color:var(--accent4)">${count}</span>
-          </div>
-        </td>
+        <td><div class="bar-cell"><div class="bar" style="background:var(--accent4);width:${Math.round((count/maxPort)*120)}px"></div><span class="count" style="color:var(--accent4)">${count}</span></div></td>
       </tr>
     `).join('');
   } else {
     portsTbody.innerHTML = '<tr><td colspan="3" style="color:var(--text-dim);text-align:center;padding:20px;">No data yet</td></tr>';
   }
- 
-  // Top signatures
+
   const maxSig = maxVal(s.top_signatures);
   const sigsTbody = document.querySelector('#table-sigs tbody');
   if (s.top_signatures && s.top_signatures.length > 0) {
     sigsTbody.innerHTML = s.top_signatures.map(([sig, count]) => `
       <tr>
         <td style="color:var(--text)">${sig}</td>
-        <td>
-          <div class="bar-cell">
-            <div class="bar red" style="width:${Math.round((count/maxSig)*200)}px"></div>
-            <span class="count red">${count}</span>
-          </div>
-        </td>
+        <td><div class="bar-cell"><div class="bar red" style="width:${Math.round((count/maxSig)*200)}px"></div><span class="count red">${count}</span></div></td>
       </tr>
     `).join('');
   } else {
     sigsTbody.innerHTML = '<tr><td colspan="2" style="color:var(--text-dim);text-align:center;padding:20px;">No alerts today</td></tr>';
   }
 }
- 
+
+// Simple markdown renderer
+function renderMarkdown(md) {
+  return md
+    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/^\| (.+) \|$/gm, (match) => {
+      const cells = match.slice(2,-2).split(' | ');
+      return '<tr>' + cells.map(c => `<td>${c}</td>`).join('') + '</tr>';
+    })
+    .replace(/^(\|[-| ]+\|)$/gm, '')
+    .replace(/(<tr>.*<\/tr>\n?)+/gs, (match) => `<table>${match}</table>`)
+    .replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>')
+    .replace(/^---$/gm, '<hr>')
+    .replace(/^- (.+)$/gm, '<li>$1</li>')
+    .replace(/(<li>.*<\/li>\n?)+/gs, (match) => `<ul>${match}</ul>`)
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>')
+    .replace(/\n\n/g, '</p><p>')
+    .replace(/^(?!<[huptbla])/gm, '')
+    .replace(/<p><\/p>/g, '');
+}
+
+async function loadReports() {
+  try {
+    const resp = await fetch('reports/index.json?t=' + Date.now());
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const data = await resp.json();
+    const container = document.getElementById('reports-list');
+    if (!data.reports || data.reports.length === 0) {
+      container.innerHTML = '<div style="color:var(--text-dim);font-family:\'Share Tech Mono\',monospace;font-size:11px;padding:20px;text-align:center;">NO REPORTS YET</div>';
+      return;
+    }
+    container.innerHTML = data.reports.slice().reverse().map(r => `
+      <div class="report-card">
+        <div>
+          <div class="report-date">${r.date}</div>
+          <div class="report-title">${r.title}</div>
+          <div class="report-summary">${r.summary}</div>
+        </div>
+        <button class="report-btn" onclick="openReport('${r.file}')">READ →</button>
+      </div>
+    `).join('');
+  } catch(e) {
+    document.getElementById('reports-list').innerHTML =
+      '<div style="color:var(--accent3);font-family:\'Share Tech Mono\',monospace;font-size:11px;padding:20px;">ERROR LOADING REPORTS</div>';
+  }
+}
+
+async function openReport(file) {
+  try {
+    const resp = await fetch(file + '?t=' + Date.now());
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const md = await resp.text();
+    document.getElementById('report-content').innerHTML = '<p>' + renderMarkdown(md) + '</p>';
+    document.getElementById('report-modal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    window.scrollTo(0,0);
+  } catch(e) {
+    alert('Error loading report: ' + e.message);
+  }
+}
+
+function closeReport() {
+  document.getElementById('report-modal').style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+document.getElementById('report-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeReport();
+});
+
 async function loadData() {
   try {
     const resp = await fetch('data.json?t=' + Date.now());
@@ -779,15 +597,15 @@ async function loadData() {
     document.getElementById('loading').style.display = 'none';
     document.getElementById('dashboard').style.display = 'block';
     renderDashboard(data);
-  } catch (e) {
+  } catch(e) {
     document.getElementById('loading').innerHTML =
       `<div class="error-msg">ERROR LOADING DATA.JSON<br><small>${e.message}</small></div>`;
   }
 }
- 
+
 loadData();
-setInterval(loadData, 300000); // refresh every 5 minutes
+loadReports();
+setInterval(loadData, 300000);
 </script>
 </body>
 </html>
- 
