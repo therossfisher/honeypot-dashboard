@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-05-23T00:45:01.618818+00:00",
-  "last_updated_local": "2026-05-22 17:45:01 PDT",
+  "last_updated": "2026-05-23T00:50:01.437597+00:00",
+  "last_updated_local": "2026-05-22 17:50:01 PDT",
   "cowrie": {
-    "total_connections": 1762,
-    "total_login_attempts": 1559,
+    "total_connections": 1763,
+    "total_login_attempts": 1560,
     "successful_logins": 161,
     "unique_ips": 192,
     "top_usernames": [
@@ -2380,13 +2380,6 @@
     ],
     "recent_attempts": [
       {
-        "time": "17:18:05",
-        "ip": "159.65.2.17",
-        "username": "qw",
-        "password": "qw",
-        "success": false
-      },
-      {
         "time": "17:20:34",
         "ip": "152.32.187.177",
         "username": "tempuser",
@@ -2518,19 +2511,26 @@
         "username": "yan",
         "password": "123456",
         "success": false
+      },
+      {
+        "time": "17:47:51",
+        "ip": "159.65.2.17",
+        "username": "denis",
+        "password": "denis",
+        "success": false
       }
     ]
   },
   "suricata": {
-    "total_alerts": 486,
+    "total_alerts": 483,
     "alerts_by_severity": {
-      "3": 152,
-      "2": 334
+      "3": 150,
+      "2": 333
     },
     "top_signatures": [
       [
         "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        140
+        138
       ],
       [
         "ET DROP Dshield Block Listed Source group 1",
@@ -2572,7 +2572,7 @@
     "top_src_ips": [
       [
         "87.251.64.176",
-        111
+        109
       ],
       [
         "45.139.122.80",
@@ -2612,20 +2612,6 @@
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "16:24:45",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "58.209.82.167",
-        "dest_port": 22
-      },
-      {
-        "time": "16:25:06",
-        "severity": 2,
-        "signature": "ET SCAN Potential SSH Scan",
-        "src_ip": "58.209.82.167",
-        "dest_port": 22
-      },
       {
         "time": "16:27:18",
         "severity": 2,
@@ -2751,11 +2737,25 @@
         "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
         "src_ip": "87.251.64.176",
         "dest_port": 22
+      },
+      {
+        "time": "17:48:52",
+        "severity": 2,
+        "signature": "ET DROP Spamhaus DROP Listed Traffic Inbound group 7",
+        "src_ip": "45.148.10.67",
+        "dest_port": 8443
+      },
+      {
+        "time": "17:48:52",
+        "severity": 2,
+        "signature": "ET DROP Dshield Block Listed Source group 1",
+        "src_ip": "45.148.10.67",
+        "dest_port": 8443
       }
     ]
   },
   "dshield": {
-    "total_connections": 1909,
+    "total_connections": 1912,
     "unique_ips": 330,
     "top_src_ips": [
       [
@@ -2779,16 +2779,16 @@
         27
       ],
       [
+        "45.148.10.67",
+        23
+      ],
+      [
         "167.94.146.54",
         23
       ],
       [
         "103.164.9.74",
         23
-      ],
-      [
-        "45.148.10.67",
-        21
       ],
       [
         "179.62.216.38",
@@ -2802,30 +2802,18 @@
     "top_dest_ports": [
       [
         "22",
-        1648
+        1649
       ],
       [
         "8443",
-        157
+        158
       ],
       [
         "8000",
-        104
+        105
       ]
     ],
     "recent_connections": [
-      {
-        "src_ip": "165.232.167.235",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "165.232.167.235",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "165.232.167.235",
-        "dest_port": "22"
-      },
       {
         "src_ip": "58.48.170.235",
         "dest_port": "22"
@@ -2893,6 +2881,18 @@
       {
         "src_ip": "159.65.2.17",
         "dest_port": "22"
+      },
+      {
+        "src_ip": "159.65.2.17",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "45.148.10.67",
+        "dest_port": "8443"
+      },
+      {
+        "src_ip": "45.148.10.67",
+        "dest_port": "8000"
       }
     ]
   }
