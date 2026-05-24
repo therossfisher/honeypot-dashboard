@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-05-24T09:30:01.721304+00:00",
-  "last_updated_local": "2026-05-24 02:30:01 PDT",
+  "last_updated": "2026-05-24T09:35:01.695580+00:00",
+  "last_updated_local": "2026-05-24 02:35:01 PDT",
   "cowrie": {
-    "total_connections": 276,
-    "total_login_attempts": 232,
+    "total_connections": 277,
+    "total_login_attempts": 233,
     "successful_logins": 18,
     "unique_ips": 38,
     "top_usernames": [
@@ -63,7 +63,7 @@
       ],
       [
         "123456",
-        9
+        10
       ],
       [
         "123",
@@ -433,13 +433,6 @@
     ],
     "recent_attempts": [
       {
-        "time": "02:15:00",
-        "ip": "87.106.35.227",
-        "username": "gg",
-        "password": "gg",
-        "success": false
-      },
-      {
         "time": "02:15:11",
         "ip": "2.57.121.112",
         "username": "admin",
@@ -571,14 +564,21 @@
         "username": "root",
         "password": "1qazxdr5432",
         "success": false
+      },
+      {
+        "time": "02:33:25",
+        "ip": "165.154.6.75",
+        "username": "ftpadmin",
+        "password": "123456",
+        "success": false
       }
     ]
   },
   "suricata": {
-    "total_alerts": 52,
+    "total_alerts": 54,
     "alerts_by_severity": {
       "3": 34,
-      "2": 18
+      "2": 20
     },
     "top_signatures": [
       [
@@ -587,11 +587,11 @@
       ],
       [
         "ET DROP Dshield Block Listed Source group 1",
-        4
+        5
       ],
       [
         "ET DROP Spamhaus DROP Listed Traffic Inbound group 36",
-        3
+        4
       ],
       [
         "ET DROP Spamhaus DROP Listed Traffic Inbound group 65",
@@ -660,25 +660,11 @@
         2
       ],
       [
-        "176.65.148.184",
-        1
+        "176.65.139.219",
+        2
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "01:25:51",
-        "severity": 3,
-        "signature": "SURICATA SSH invalid banner",
-        "src_ip": "192.168.1.250",
-        "dest_port": 33682
-      },
-      {
-        "time": "01:25:51",
-        "severity": 3,
-        "signature": "SURICATA SSH invalid banner",
-        "src_ip": "135.237.126.83",
-        "dest_port": 22
-      },
       {
         "time": "01:26:44",
         "severity": 3,
@@ -804,12 +790,26 @@
         "signature": "ET COMPROMISED Known Compromised or Hostile Host Traffic group 6",
         "src_ip": "213.209.159.56",
         "dest_port": 22
+      },
+      {
+        "time": "02:33:04",
+        "severity": 2,
+        "signature": "ET DROP Spamhaus DROP Listed Traffic Inbound group 36",
+        "src_ip": "176.65.139.219",
+        "dest_port": 22
+      },
+      {
+        "time": "02:33:04",
+        "severity": 2,
+        "signature": "ET DROP Dshield Block Listed Source group 1",
+        "src_ip": "176.65.139.219",
+        "dest_port": 22
       }
     ]
   },
   "dshield": {
-    "total_connections": 278,
-    "unique_ips": 59,
+    "total_connections": 280,
+    "unique_ips": 60,
     "top_src_ips": [
       [
         "14.103.120.138",
@@ -855,7 +855,7 @@
     "top_dest_ports": [
       [
         "22",
-        254
+        256
       ],
       [
         "8443",
@@ -867,14 +867,6 @@
       ]
     ],
     "recent_connections": [
-      {
-        "src_ip": "23.81.36.246",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "165.154.6.75",
-        "dest_port": "22"
-      },
       {
         "src_ip": "87.106.35.227",
         "dest_port": "22"
@@ -941,6 +933,14 @@
       },
       {
         "src_ip": "106.13.182.13",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "165.154.6.75",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "176.65.139.219",
         "dest_port": "22"
       },
       {
