@@ -1,19 +1,19 @@
 {
-  "last_updated": "2026-05-24T07:20:01.829623+00:00",
-  "last_updated_local": "2026-05-24 00:20:01 PDT",
+  "last_updated": "2026-05-24T07:25:01.261515+00:00",
+  "last_updated_local": "2026-05-24 00:25:01 PDT",
   "cowrie": {
-    "total_connections": 28,
-    "total_login_attempts": 25,
+    "total_connections": 31,
+    "total_login_attempts": 28,
     "successful_logins": 4,
     "unique_ips": 7,
     "top_usernames": [
       [
         "root",
-        14
+        15
       ],
       [
         "support",
-        5
+        6
       ],
       [
         "345gs5662d34",
@@ -22,12 +22,16 @@
       [
         "user01",
         2
+      ],
+      [
+        "ubuntu",
+        1
       ]
     ],
     "top_passwords": [
       [
         "support",
-        5
+        6
       ],
       [
         "345gs5662d34",
@@ -42,6 +46,10 @@
         3
       ],
       [
+        "Abc12345.",
+        2
+      ],
+      [
         "Aa123456...",
         2
       ],
@@ -52,10 +60,6 @@
       [
         "Hik12345",
         2
-      ],
-      [
-        "Abc12345.",
-        1
       ],
       [
         "123456789Aa",
@@ -69,15 +73,15 @@
     "top_ips": [
       [
         "165.154.6.49",
-        10
+        11
       ],
       [
         "103.200.25.198",
-        9
+        10
       ],
       [
         "87.251.64.176",
-        5
+        6
       ],
       [
         "160.250.186.97",
@@ -171,27 +175,6 @@
       }
     ],
     "recent_attempts": [
-      {
-        "time": "00:05:38",
-        "ip": "165.154.6.49",
-        "username": "root",
-        "password": "123456789Aa",
-        "success": true
-      },
-      {
-        "time": "00:05:40",
-        "ip": "165.154.6.49",
-        "username": "345gs5662d34",
-        "password": "345gs5662d34",
-        "success": false
-      },
-      {
-        "time": "00:05:42",
-        "ip": "165.154.6.49",
-        "username": "root",
-        "password": "3245gs5662d34",
-        "success": false
-      },
       {
         "time": "00:06:33",
         "ip": "103.200.25.198",
@@ -310,14 +293,35 @@
         "username": "root",
         "password": "Aa.123456",
         "success": false
+      },
+      {
+        "time": "00:23:19",
+        "ip": "165.154.6.49",
+        "username": "root",
+        "password": "Abc12345.",
+        "success": false
+      },
+      {
+        "time": "00:23:32",
+        "ip": "103.200.25.198",
+        "username": "ubuntu",
+        "password": "123",
+        "success": false
+      },
+      {
+        "time": "00:23:55",
+        "ip": "87.251.64.176",
+        "username": "support",
+        "password": "support",
+        "success": false
       }
     ]
   },
   "suricata": {
-    "total_alerts": 709,
+    "total_alerts": 711,
     "alerts_by_severity": {
       "3": 300,
-      "2": 409
+      "2": 411
     },
     "top_signatures": [
       [
@@ -326,7 +330,7 @@
       ],
       [
         "ET DROP Dshield Block Listed Source group 1",
-        107
+        108
       ],
       [
         "ET SCAN Potential SSH Scan",
@@ -334,7 +338,7 @@
       ],
       [
         "ET DROP Spamhaus DROP Listed Traffic Inbound group 7",
-        31
+        32
       ],
       [
         "ET DROP Spamhaus DROP Listed Traffic Inbound group 65",
@@ -384,7 +388,7 @@
       ],
       [
         "45.148.10.67",
-        28
+        30
       ],
       [
         "45.148.10.121",
@@ -404,27 +408,6 @@
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "23:53:37",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "87.251.64.176",
-        "dest_port": 22
-      },
-      {
-        "time": "23:56:38",
-        "severity": 2,
-        "signature": "ET DROP Dshield Block Listed Source group 1",
-        "src_ip": "87.251.64.155",
-        "dest_port": 22
-      },
-      {
-        "time": "23:56:38",
-        "severity": 2,
-        "signature": "ET CINS Active Threat Intelligence Poor Reputation IP group 131",
-        "src_ip": "87.251.64.155",
-        "dest_port": 22
-      },
       {
         "time": "23:59:12",
         "severity": 2,
@@ -543,11 +526,32 @@
         "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
         "src_ip": "87.251.64.176",
         "dest_port": 22
+      },
+      {
+        "time": "00:23:49",
+        "severity": 2,
+        "signature": "ET DROP Spamhaus DROP Listed Traffic Inbound group 7",
+        "src_ip": "45.148.10.67",
+        "dest_port": 8000
+      },
+      {
+        "time": "00:23:49",
+        "severity": 2,
+        "signature": "ET DROP Dshield Block Listed Source group 1",
+        "src_ip": "45.148.10.67",
+        "dest_port": 8000
+      },
+      {
+        "time": "00:23:54",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "87.251.64.176",
+        "dest_port": 22
       }
     ]
   },
   "dshield": {
-    "total_connections": 4938,
+    "total_connections": 4943,
     "unique_ips": 463,
     "top_src_ips": [
       [
@@ -560,7 +564,7 @@
       ],
       [
         "87.251.64.176",
-        91
+        92
       ],
       [
         "193.32.162.145",
@@ -576,7 +580,7 @@
       ],
       [
         "45.148.10.67",
-        30
+        32
       ],
       [
         "81.9.145.130",
@@ -594,38 +598,18 @@
     "top_dest_ports": [
       [
         "22",
-        4649
+        4652
       ],
       [
         "8443",
-        161
+        162
       ],
       [
         "8000",
-        128
+        129
       ]
     ],
     "recent_connections": [
-      {
-        "src_ip": "165.154.6.49",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "165.154.6.49",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "165.154.6.49",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "87.251.64.176",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "103.200.25.198",
-        "dest_port": "22"
-      },
       {
         "src_ip": "220.158.232.160",
         "dest_port": "22"
@@ -684,6 +668,26 @@
       },
       {
         "src_ip": "165.154.6.49",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "165.154.6.49",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "103.200.25.198",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "45.148.10.67",
+        "dest_port": "8000"
+      },
+      {
+        "src_ip": "45.148.10.67",
+        "dest_port": "8443"
+      },
+      {
+        "src_ip": "87.251.64.176",
         "dest_port": "22"
       }
     ]
