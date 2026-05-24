@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-05-24T03:20:01.155250+00:00",
-  "last_updated_local": "2026-05-23 20:20:01 PDT",
+  "last_updated": "2026-05-24T03:25:02.166068+00:00",
+  "last_updated_local": "2026-05-23 20:25:02 PDT",
   "cowrie": {
-    "total_connections": 3221,
-    "total_login_attempts": 3105,
+    "total_connections": 3225,
+    "total_login_attempts": 3109,
     "successful_logins": 159,
-    "unique_ips": 230,
+    "unique_ips": 233,
     "top_usernames": [
       [
         "root",
-        890
+        891
       ],
       [
         "admin",
@@ -44,8 +44,8 @@
         28
       ],
       [
-        "user1",
-        20
+        "ftpuser",
+        21
       ]
     ],
     "top_passwords": [
@@ -67,7 +67,7 @@
       ],
       [
         "123",
-        53
+        54
       ],
       [
         "1234",
@@ -2780,34 +2780,6 @@
     ],
     "recent_attempts": [
       {
-        "time": "19:49:05",
-        "ip": "2.57.121.25",
-        "username": "user",
-        "password": "buggy",
-        "success": false
-      },
-      {
-        "time": "19:49:06",
-        "ip": "2.57.121.25",
-        "username": "user",
-        "password": "buckbuck",
-        "success": false
-      },
-      {
-        "time": "19:50:31",
-        "ip": "45.148.10.121",
-        "username": "admin",
-        "password": "admin",
-        "success": false
-      },
-      {
-        "time": "19:50:48",
-        "ip": "103.78.0.229",
-        "username": "kyt",
-        "password": "kyt",
-        "success": false
-      },
-      {
         "time": "19:53:34",
         "ip": "5.182.83.231",
         "username": "root",
@@ -2918,27 +2890,55 @@
         "username": "ubuntu",
         "password": "Admin",
         "success": false
+      },
+      {
+        "time": "20:22:58",
+        "ip": "191.97.12.90",
+        "username": "root",
+        "password": "Password321",
+        "success": false
+      },
+      {
+        "time": "20:23:14",
+        "ip": "121.227.31.13",
+        "username": "mt",
+        "password": "123",
+        "success": false
+      },
+      {
+        "time": "20:24:18",
+        "ip": "151.242.30.119",
+        "username": "aman",
+        "password": "aman@123",
+        "success": false
+      },
+      {
+        "time": "20:24:24",
+        "ip": "121.229.9.110",
+        "username": "ftpuser",
+        "password": "ftp",
+        "success": false
       }
     ]
   },
   "suricata": {
-    "total_alerts": 602,
+    "total_alerts": 594,
     "alerts_by_severity": {
-      "2": 352,
-      "3": 250
+      "3": 246,
+      "2": 348
     },
     "top_signatures": [
       [
         "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        240
+        236
       ],
       [
         "ET DROP Dshield Block Listed Source group 1",
-        107
+        106
       ],
       [
         "ET SCAN Potential SSH Scan",
-        46
+        43
       ],
       [
         "ET DROP Spamhaus DROP Listed Traffic Inbound group 7",
@@ -2961,12 +2961,12 @@
         8
       ],
       [
-        "ET CINS Active Threat Intelligence Poor Reputation IP group 57",
+        "ET CINS Active Threat Intelligence Poor Reputation IP group 131",
         7
       ],
       [
-        "ET CINS Active Threat Intelligence Poor Reputation IP group 131",
-        7
+        "SURICATA SSH invalid banner",
+        6
       ]
     ],
     "top_src_ips": [
@@ -3007,18 +3007,11 @@
         13
       ],
       [
-        "213.209.159.158",
-        9
+        "5.61.209.126",
+        8
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "19:06:22",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "87.251.64.176",
-        "dest_port": 22
-      },
       {
         "time": "19:08:28",
         "severity": 3,
@@ -3151,12 +3144,19 @@
         "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
         "src_ip": "103.203.57.2",
         "dest_port": 22
+      },
+      {
+        "time": "20:24:51",
+        "severity": 2,
+        "signature": "ET CINS Active Threat Intelligence Poor Reputation IP group 147",
+        "src_ip": "103.126.87.206",
+        "dest_port": 8000
       }
     ]
   },
   "dshield": {
-    "total_connections": 3379,
-    "unique_ips": 398,
+    "total_connections": 3386,
+    "unique_ips": 403,
     "top_src_ips": [
       [
         "45.156.87.69",
@@ -3202,7 +3202,7 @@
     "top_dest_ports": [
       [
         "22",
-        3133
+        3137
       ],
       [
         "8443",
@@ -3210,38 +3210,10 @@
       ],
       [
         "8000",
-        109
+        112
       ]
     ],
     "recent_connections": [
-      {
-        "src_ip": "103.78.0.229",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "45.148.10.230",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "171.211.125.105",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "103.78.0.229",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "185.203.237.43",
-        "dest_port": "8443"
-      },
-      {
-        "src_ip": "185.203.237.43",
-        "dest_port": "8443"
-      },
-      {
-        "src_ip": "176.65.139.213",
-        "dest_port": "22"
-      },
       {
         "src_ip": "103.78.0.229",
         "dest_port": "22"
@@ -3293,6 +3265,34 @@
       {
         "src_ip": "121.227.31.13",
         "dest_port": "22"
+      },
+      {
+        "src_ip": "191.97.12.90",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "121.227.31.13",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "151.242.30.119",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "121.229.9.110",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "159.89.91.106",
+        "dest_port": "8000"
+      },
+      {
+        "src_ip": "159.89.91.106",
+        "dest_port": "8000"
+      },
+      {
+        "src_ip": "103.126.87.206",
+        "dest_port": "8000"
       }
     ]
   }
