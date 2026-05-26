@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-05-26T11:45:01.367493+00:00",
-  "last_updated_local": "2026-05-26 04:45:01 PDT",
+  "last_updated": "2026-05-26T11:50:01.201747+00:00",
+  "last_updated_local": "2026-05-26 04:50:01 PDT",
   "cowrie": {
-    "total_connections": 97,
+    "total_connections": 101,
     "total_login_attempts": 110,
     "successful_logins": 0,
-    "unique_ips": 15,
+    "unique_ips": 16,
     "top_usernames": [
       [
         "solv",
@@ -120,15 +120,15 @@
         4
       ],
       [
+        "118.194.248.142",
+        4
+      ],
+      [
         "45.148.10.141",
         2
       ],
       [
         "35.205.230.186",
-        2
-      ],
-      [
-        "213.209.159.56",
         2
       ]
     ],
@@ -277,15 +277,15 @@
     ]
   },
   "suricata": {
-    "total_alerts": 488,
+    "total_alerts": 483,
     "alerts_by_severity": {
-      "2": 296,
-      "3": 192
+      "2": 293,
+      "3": 190
     },
     "top_signatures": [
       [
         "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        185
+        182
       ],
       [
         "ET DROP Dshield Block Listed Source group 1",
@@ -297,7 +297,7 @@
       ],
       [
         "ET SCAN Potential SSH Scan",
-        19
+        16
       ],
       [
         "ET DROP Spamhaus DROP Listed Traffic Inbound group 65",
@@ -350,10 +350,6 @@
         22
       ],
       [
-        "45.156.87.253",
-        17
-      ],
-      [
         "213.209.159.158",
         17
       ],
@@ -364,16 +360,13 @@
       [
         "45.148.10.230",
         12
+      ],
+      [
+        "45.156.87.253",
+        11
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "03:33:49",
-        "severity": 2,
-        "signature": "ET CINS Active Threat Intelligence Poor Reputation IP group 109",
-        "src_ip": "64.62.197.189",
-        "dest_port": 8000
-      },
       {
         "time": "03:41:48",
         "severity": 2,
@@ -506,11 +499,18 @@
         "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
         "src_ip": "45.148.10.121",
         "dest_port": 22
+      },
+      {
+        "time": "04:45:41",
+        "severity": 3,
+        "signature": "SURICATA Applayer Mismatch protocol both directions",
+        "src_ip": "118.194.248.142",
+        "dest_port": 22
       }
     ]
   },
   "dshield": {
-    "total_connections": 120,
+    "total_connections": 124,
     "unique_ips": 54,
     "top_src_ips": [
       [
@@ -528,6 +528,10 @@
       [
         "45.148.10.67",
         6
+      ],
+      [
+        "118.194.248.142",
+        5
       ],
       [
         "2.57.121.25",
@@ -548,16 +552,12 @@
       [
         "213.209.159.56",
         2
-      ],
-      [
-        "45.148.10.121",
-        2
       ]
     ],
     "top_dest_ports": [
       [
         "22",
-        78
+        82
       ],
       [
         "8443",
@@ -569,22 +569,6 @@
       ]
     ],
     "recent_connections": [
-      {
-        "src_ip": "89.248.165.203",
-        "dest_port": "8443"
-      },
-      {
-        "src_ip": "89.248.165.203",
-        "dest_port": "8000"
-      },
-      {
-        "src_ip": "14.228.35.226",
-        "dest_port": "8000"
-      },
-      {
-        "src_ip": "87.251.64.176",
-        "dest_port": "22"
-      },
       {
         "src_ip": "185.200.118.46",
         "dest_port": "8443"
@@ -647,6 +631,22 @@
       },
       {
         "src_ip": "45.148.10.121",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "118.194.248.142",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "118.194.248.142",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "118.194.248.142",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "118.194.248.142",
         "dest_port": "22"
       }
     ]
