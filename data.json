@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-05-26T12:00:01.216263+00:00",
-  "last_updated_local": "2026-05-26 05:00:01 PDT",
+  "last_updated": "2026-05-26T12:05:01.162965+00:00",
+  "last_updated_local": "2026-05-26 05:05:01 PDT",
   "cowrie": {
-    "total_connections": 101,
-    "total_login_attempts": 110,
-    "successful_logins": 0,
-    "unique_ips": 16,
+    "total_connections": 103,
+    "total_login_attempts": 112,
+    "successful_logins": 1,
+    "unique_ips": 17,
     "top_usernames": [
       [
         "solv",
@@ -21,7 +21,7 @@
       ],
       [
         "support",
-        14
+        15
       ],
       [
         "sol",
@@ -51,7 +51,7 @@
     "top_passwords": [
       [
         "support",
-        14
+        15
       ],
       [
         "123456",
@@ -97,7 +97,7 @@
       ],
       [
         "87.251.64.176",
-        16
+        17
       ],
       [
         "2.57.122.238",
@@ -132,22 +132,18 @@
         2
       ]
     ],
-    "attacker_sessions": [],
+    "attacker_sessions": [
+      {
+        "ip": "50.56.159.185",
+        "username": "root",
+        "password": "root123",
+        "time": "05:02:11",
+        "commands": [
+          "pwd"
+        ]
+      }
+    ],
     "recent_attempts": [
-      {
-        "time": "03:04:17",
-        "ip": "2.57.122.238",
-        "username": "sol",
-        "password": "123",
-        "success": false
-      },
-      {
-        "time": "03:06:35",
-        "ip": "2.57.122.238",
-        "username": "sol",
-        "password": "12345678",
-        "success": false
-      },
       {
         "time": "03:20:19",
         "ip": "2.57.121.25",
@@ -273,19 +269,33 @@
         "username": "user",
         "password": "170388",
         "success": false
+      },
+      {
+        "time": "05:00:55",
+        "ip": "87.251.64.176",
+        "username": "support",
+        "password": "support",
+        "success": false
+      },
+      {
+        "time": "05:02:11",
+        "ip": "50.56.159.185",
+        "username": "root",
+        "password": "root123",
+        "success": true
       }
     ]
   },
   "suricata": {
-    "total_alerts": 470,
+    "total_alerts": 471,
     "alerts_by_severity": {
-      "2": 285,
-      "3": 185
+      "2": 284,
+      "3": 187
     },
     "top_signatures": [
       [
         "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        177
+        179
       ],
       [
         "ET DROP Dshield Block Listed Source group 1",
@@ -304,12 +314,12 @@
         14
       ],
       [
-        "ET SCAN Potential SSH Scan",
+        "ET COMPROMISED Known Compromised or Hostile Host Traffic group 6",
         11
       ],
       [
-        "ET COMPROMISED Known Compromised or Hostile Host Traffic group 6",
-        11
+        "ET SCAN Potential SSH Scan",
+        10
       ],
       [
         "ET DROP Spamhaus DROP Listed Traffic Inbound group 36",
@@ -327,7 +337,7 @@
     "top_src_ips": [
       [
         "87.251.64.176",
-        107
+        108
       ],
       [
         "80.94.92.184",
@@ -367,20 +377,6 @@
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "03:41:48",
-        "severity": 2,
-        "signature": "ET DROP Spamhaus DROP Listed Traffic Inbound group 10",
-        "src_ip": "77.90.185.16",
-        "dest_port": 22
-      },
-      {
-        "time": "03:43:12",
-        "severity": 2,
-        "signature": "ET DROP Dshield Block Listed Source group 1",
-        "src_ip": "5.61.209.126",
-        "dest_port": 8000
-      },
       {
         "time": "03:43:12",
         "severity": 2,
@@ -506,12 +502,26 @@
         "signature": "SURICATA Applayer Mismatch protocol both directions",
         "src_ip": "118.194.248.142",
         "dest_port": 22
+      },
+      {
+        "time": "05:00:54",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "87.251.64.176",
+        "dest_port": 22
+      },
+      {
+        "time": "05:02:11",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "50.56.159.185",
+        "dest_port": 22
       }
     ]
   },
   "dshield": {
-    "total_connections": 125,
-    "unique_ips": 55,
+    "total_connections": 128,
+    "unique_ips": 57,
     "top_src_ips": [
       [
         "80.94.92.184",
@@ -523,7 +533,7 @@
       ],
       [
         "87.251.64.176",
-        9
+        10
       ],
       [
         "45.148.10.67",
@@ -557,11 +567,11 @@
     "top_dest_ports": [
       [
         "22",
-        82
+        84
       ],
       [
         "8443",
-        22
+        23
       ],
       [
         "8000",
@@ -569,18 +579,6 @@
       ]
     ],
     "recent_connections": [
-      {
-        "src_ip": "14.235.131.198",
-        "dest_port": "8000"
-      },
-      {
-        "src_ip": "2.57.121.112",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "46.151.178.13",
-        "dest_port": "8443"
-      },
       {
         "src_ip": "79.124.58.142",
         "dest_port": "8443"
@@ -648,6 +646,18 @@
       {
         "src_ip": "195.178.110.204",
         "dest_port": "8000"
+      },
+      {
+        "src_ip": "87.251.64.176",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "50.56.159.185",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "151.243.11.248",
+        "dest_port": "8443"
       }
     ]
   }
