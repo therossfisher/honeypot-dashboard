@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-05-26T09:35:01.507987+00:00",
-  "last_updated_local": "2026-05-26 02:35:01 PDT",
+  "last_updated": "2026-05-26T09:40:01.144417+00:00",
+  "last_updated_local": "2026-05-26 02:40:01 PDT",
   "cowrie": {
-    "total_connections": 72,
-    "total_login_attempts": 74,
+    "total_connections": 74,
+    "total_login_attempts": 76,
     "successful_logins": 0,
     "unique_ips": 11,
     "top_usernames": [
@@ -24,19 +24,19 @@
         10
       ],
       [
+        "solana",
+        7
+      ],
+      [
         "ubuntu",
         6
       ],
       [
-        "solana",
+        "sol",
         6
       ],
       [
         "madelaine",
-        5
-      ],
-      [
-        "sol",
         5
       ],
       [
@@ -54,11 +54,15 @@
         12
       ],
       [
+        "solana",
+        4
+      ],
+      [
         "123456",
         3
       ],
       [
-        "solana",
+        "sol",
         3
       ],
       [
@@ -71,10 +75,6 @@
       ],
       [
         "12345678",
-        2
-      ],
-      [
-        "sol",
         2
       ],
       [
@@ -108,6 +108,10 @@
         4
       ],
       [
+        "2.57.122.238",
+        3
+      ],
+      [
         "45.148.10.141",
         2
       ],
@@ -126,28 +130,10 @@
       [
         "213.209.159.56",
         1
-      ],
-      [
-        "64.89.160.135",
-        1
       ]
     ],
     "attacker_sessions": [],
     "recent_attempts": [
-      {
-        "time": "01:44:20",
-        "ip": "80.94.92.184",
-        "username": "solana",
-        "password": "12345678",
-        "success": false
-      },
-      {
-        "time": "01:47:04",
-        "ip": "2.57.121.112",
-        "username": "admin",
-        "password": "07121973",
-        "success": false
-      },
       {
         "time": "01:47:05",
         "ip": "2.57.121.112",
@@ -273,20 +259,33 @@
         "username": "ubuntu",
         "password": "qwer1234",
         "success": false
+      },
+      {
+        "time": "02:37:27",
+        "ip": "2.57.122.238",
+        "username": "sol",
+        "password": "sol",
+        "success": false
+      },
+      {
+        "time": "02:39:57",
+        "ip": "2.57.122.238",
+        "username": "solana",
+        "password": "solana",
+        "success": false
       }
     ]
   },
   "suricata": {
-    "total_alerts": 510,
+    "total_alerts": 509,
     "alerts_by_severity": {
-      "2": 308,
-      "1": 2,
-      "3": 200
+      "2": 307,
+      "3": 202
     },
     "top_signatures": [
       [
         "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        187
+        189
       ],
       [
         "ET DROP Dshield Block Listed Source group 1",
@@ -298,7 +297,7 @@
       ],
       [
         "ET SCAN Potential SSH Scan",
-        32
+        31
       ],
       [
         "ET CINS Active Threat Intelligence Poor Reputation IP group 62",
@@ -359,29 +358,15 @@
         15
       ],
       [
-        "5.61.209.126",
-        10
+        "2.57.122.238",
+        11
       ],
       [
-        "45.148.10.230",
+        "5.61.209.126",
         10
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "01:32:44",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "80.94.92.184",
-        "dest_port": 22
-      },
-      {
-        "time": "01:36:44",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "80.94.92.184",
-        "dest_port": 22
-      },
       {
         "time": "01:39:29",
         "severity": 2,
@@ -507,11 +492,25 @@
         "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
         "src_ip": "80.94.92.184",
         "dest_port": 22
+      },
+      {
+        "time": "02:37:27",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "2.57.122.238",
+        "dest_port": 22
+      },
+      {
+        "time": "02:39:56",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "2.57.122.238",
+        "dest_port": 22
       }
     ]
   },
   "dshield": {
-    "total_connections": 59,
+    "total_connections": 61,
     "unique_ips": 26,
     "top_src_ips": [
       [
@@ -523,6 +522,10 @@
         5
       ],
       [
+        "2.57.122.238",
+        4
+      ],
+      [
         "2.57.121.25",
         2
       ],
@@ -532,10 +535,6 @@
       ],
       [
         "203.242.185.211",
-        2
-      ],
-      [
-        "2.57.122.238",
         2
       ],
       [
@@ -558,7 +557,7 @@
     "top_dest_ports": [
       [
         "22",
-        45
+        47
       ],
       [
         "8000",
@@ -570,14 +569,6 @@
       ]
     ],
     "recent_connections": [
-      {
-        "src_ip": "185.228.72.180",
-        "dest_port": "8000"
-      },
-      {
-        "src_ip": "80.94.92.184",
-        "dest_port": "22"
-      },
       {
         "src_ip": "203.242.185.211",
         "dest_port": "8000"
@@ -640,6 +631,14 @@
       },
       {
         "src_ip": "80.94.92.184",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "2.57.122.238",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "2.57.122.238",
         "dest_port": "22"
       },
       {
