@@ -1,19 +1,19 @@
 {
-  "last_updated": "2026-05-26T07:40:01.184090+00:00",
-  "last_updated_local": "2026-05-26 00:40:01 PDT",
+  "last_updated": "2026-05-26T07:45:01.488235+00:00",
+  "last_updated_local": "2026-05-26 00:45:01 PDT",
   "cowrie": {
-    "total_connections": 36,
-    "total_login_attempts": 25,
+    "total_connections": 39,
+    "total_login_attempts": 27,
     "successful_logins": 0,
     "unique_ips": 7,
     "top_usernames": [
       [
         "solv",
-        10
+        11
       ],
       [
         "support",
-        9
+        10
       ],
       [
         "admin",
@@ -23,7 +23,7 @@
     "top_passwords": [
       [
         "support",
-        9
+        10
       ],
       [
         "123",
@@ -65,11 +65,11 @@
     "top_ips": [
       [
         "80.94.92.184",
-        10
+        11
       ],
       [
         "87.251.64.176",
-        9
+        11
       ],
       [
         "34.14.114.202",
@@ -94,20 +94,6 @@
     ],
     "attacker_sessions": [],
     "recent_attempts": [
-      {
-        "time": "00:11:09",
-        "ip": "87.251.64.176",
-        "username": "support",
-        "password": "support",
-        "success": false
-      },
-      {
-        "time": "00:12:24",
-        "ip": "35.205.230.186",
-        "username": "admin",
-        "password": "admin",
-        "success": false
-      },
       {
         "time": "00:13:04",
         "ip": "87.251.64.176",
@@ -233,20 +219,34 @@
         "username": "support",
         "password": "support",
         "success": false
+      },
+      {
+        "time": "00:40:23",
+        "ip": "87.251.64.176",
+        "username": "support",
+        "password": "support",
+        "success": false
+      },
+      {
+        "time": "00:41:50",
+        "ip": "80.94.92.184",
+        "username": "solv",
+        "password": "qwerty1234",
+        "success": false
       }
     ]
   },
   "suricata": {
-    "total_alerts": 585,
+    "total_alerts": 575,
     "alerts_by_severity": {
-      "3": 230,
-      "2": 353,
+      "3": 225,
+      "2": 348,
       "1": 2
     },
     "top_signatures": [
       [
         "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        218
+        213
       ],
       [
         "ET DROP Dshield Block Listed Source group 1",
@@ -254,7 +254,7 @@
       ],
       [
         "ET SCAN Potential SSH Scan",
-        74
+        69
       ],
       [
         "ET DROP Spamhaus DROP Listed Traffic Inbound group 7",
@@ -288,11 +288,11 @@
     "top_src_ips": [
       [
         "87.251.64.176",
-        110
+        109
       ],
       [
         "47.83.3.83",
-        58
+        53
       ],
       [
         "45.156.87.253",
@@ -303,16 +303,16 @@
         28
       ],
       [
-        "192.109.200.78",
-        25
-      ],
-      [
         "213.209.159.56",
         24
       ],
       [
         "2.57.122.238",
         22
+      ],
+      [
+        "192.109.200.78",
+        20
       ],
       [
         "45.148.10.121",
@@ -324,31 +324,10 @@
       ],
       [
         "80.94.92.184",
-        16
+        17
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "00:11:08",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "87.251.64.176",
-        "dest_port": 22
-      },
-      {
-        "time": "00:12:23",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "35.205.230.186",
-        "dest_port": 22
-      },
-      {
-        "time": "00:13:13",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "80.94.92.184",
-        "dest_port": 22
-      },
       {
         "time": "00:14:02",
         "severity": 2,
@@ -467,25 +446,62 @@
         "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
         "src_ip": "87.251.64.176",
         "dest_port": 22
+      },
+      {
+        "time": "00:41:48",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "80.94.92.184",
+        "dest_port": 22
+      },
+      {
+        "time": "00:43:15",
+        "severity": 2,
+        "signature": "ET DROP Dshield Block Listed Source group 1",
+        "src_ip": "87.251.64.176",
+        "dest_port": 22
+      },
+      {
+        "time": "00:43:15",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "87.251.64.176",
+        "dest_port": 22
       }
     ]
   },
   "dshield": {
-    "total_connections": 1,
-    "unique_ips": 1,
+    "total_connections": 4,
+    "unique_ips": 2,
     "top_src_ips": [
       [
         "87.251.64.176",
+        3
+      ],
+      [
+        "80.94.92.184",
         1
       ]
     ],
     "top_dest_ports": [
       [
         "22",
-        1
+        4
       ]
     ],
     "recent_connections": [
+      {
+        "src_ip": "87.251.64.176",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "87.251.64.176",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "80.94.92.184",
+        "dest_port": "22"
+      },
       {
         "src_ip": "87.251.64.176",
         "dest_port": "22"
