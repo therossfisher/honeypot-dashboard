@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-06-11T13:00:01.802872+00:00",
-  "last_updated_local": "2026-06-11 06:00:01 PDT",
+  "last_updated": "2026-06-11T13:30:01.751470+00:00",
+  "last_updated_local": "2026-06-11 06:30:01 PDT",
   "cowrie": {
-    "total_connections": 1130,
-    "total_login_attempts": 971,
+    "total_connections": 1134,
+    "total_login_attempts": 972,
     "successful_logins": 17,
-    "unique_ips": 69,
+    "unique_ips": 72,
     "top_usernames": [
       [
         "root",
@@ -270,13 +270,6 @@
     ],
     "recent_attempts": [
       {
-        "time": "04:30:40",
-        "ip": "2.57.121.112",
-        "username": "admin",
-        "password": "crazyboy",
-        "success": false
-      },
-      {
         "time": "04:30:41",
         "ip": "2.57.121.112",
         "username": "admin",
@@ -408,24 +401,31 @@
         "username": "admin",
         "password": "cornflak",
         "success": false
+      },
+      {
+        "time": "06:09:48",
+        "ip": "103.68.22.115",
+        "username": "operator",
+        "password": "logon",
+        "success": false
       }
     ]
   },
   "suricata": {
-    "total_alerts": 721,
+    "total_alerts": 725,
     "alerts_by_severity": {
       "2": 451,
-      "3": 265,
+      "3": 269,
       "1": 5
     },
     "top_signatures": [
       [
         "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        248
+        249
       ],
       [
         "ET DROP Dshield Block Listed Source group 1",
-        121
+        120
       ],
       [
         "ET SCAN Potential SSH Scan",
@@ -433,7 +433,7 @@
       ],
       [
         "ET DROP Spamhaus DROP Listed Traffic Inbound group 7",
-        37
+        36
       ],
       [
         "ET DROP Spamhaus DROP Listed Traffic Inbound group 55",
@@ -453,17 +453,17 @@
       ],
       [
         "ET DROP Spamhaus DROP Listed Traffic Inbound group 10",
-        8
+        9
       ],
       [
-        "ET CINS Active Threat Intelligence Poor Reputation IP group 131",
-        7
+        "SURICATA SSH invalid banner",
+        8
       ]
     ],
     "top_src_ips": [
       [
         "87.251.64.176",
-        110
+        111
       ],
       [
         "45.156.87.93",
@@ -483,7 +483,7 @@
       ],
       [
         "45.148.10.67",
-        26
+        24
       ],
       [
         "45.148.10.121",
@@ -491,7 +491,7 @@
       ],
       [
         "204.76.203.206",
-        13
+        14
       ],
       [
         "139.19.117.197",
@@ -503,62 +503,6 @@
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "04:28:10",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "87.251.64.176",
-        "dest_port": 22
-      },
-      {
-        "time": "04:29:48",
-        "severity": 3,
-        "signature": "SURICATA SSH invalid banner",
-        "src_ip": "18.226.253.35",
-        "dest_port": 22
-      },
-      {
-        "time": "04:29:48",
-        "severity": 3,
-        "signature": "SURICATA SSH invalid banner",
-        "src_ip": "192.168.1.250",
-        "dest_port": 61754
-      },
-      {
-        "time": "04:33:52",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "18.226.253.35",
-        "dest_port": 22
-      },
-      {
-        "time": "04:37:21",
-        "severity": 2,
-        "signature": "ET DROP Spamhaus DROP Listed Traffic Inbound group 55",
-        "src_ip": "204.76.203.206",
-        "dest_port": 8000
-      },
-      {
-        "time": "04:47:29",
-        "severity": 2,
-        "signature": "ET DROP Dshield Block Listed Source group 1",
-        "src_ip": "87.251.64.157",
-        "dest_port": 22
-      },
-      {
-        "time": "04:47:29",
-        "severity": 2,
-        "signature": "ET CINS Active Threat Intelligence Poor Reputation IP group 131",
-        "src_ip": "87.251.64.157",
-        "dest_port": 22
-      },
-      {
-        "time": "04:50:10",
-        "severity": 2,
-        "signature": "ET DROP Dshield Block Listed Source group 1",
-        "src_ip": "45.205.1.246",
-        "dest_port": 8000
-      },
       {
         "time": "04:56:11",
         "severity": 2,
@@ -642,12 +586,68 @@
         "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
         "src_ip": "139.19.117.197",
         "dest_port": 22
+      },
+      {
+        "time": "06:01:57",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "20.163.15.238",
+        "dest_port": 22
+      },
+      {
+        "time": "06:01:57",
+        "severity": 3,
+        "signature": "SURICATA Applayer Detect protocol only one direction",
+        "src_ip": "20.163.15.238",
+        "dest_port": 22
+      },
+      {
+        "time": "06:01:57",
+        "severity": 3,
+        "signature": "SURICATA SSH invalid banner",
+        "src_ip": "20.163.15.238",
+        "dest_port": 22
+      },
+      {
+        "time": "06:01:57",
+        "severity": 3,
+        "signature": "SURICATA SSH invalid banner",
+        "src_ip": "192.168.1.250",
+        "dest_port": 54854
+      },
+      {
+        "time": "06:06:01",
+        "severity": 2,
+        "signature": "ET DROP Dshield Block Listed Source group 1",
+        "src_ip": "87.251.64.176",
+        "dest_port": 22
+      },
+      {
+        "time": "06:08:53",
+        "severity": 2,
+        "signature": "ET DROP Spamhaus DROP Listed Traffic Inbound group 10",
+        "src_ip": "77.90.185.78",
+        "dest_port": 8443
+      },
+      {
+        "time": "06:12:07",
+        "severity": 2,
+        "signature": "ET DROP Spamhaus DROP Listed Traffic Inbound group 55",
+        "src_ip": "204.76.203.206",
+        "dest_port": 8000
+      },
+      {
+        "time": "06:13:53",
+        "severity": 2,
+        "signature": "ET CINS Active Threat Intelligence Poor Reputation IP group 20",
+        "src_ip": "20.14.88.205",
+        "dest_port": 8000
       }
     ]
   },
   "dshield": {
-    "total_connections": 1093,
-    "unique_ips": 118,
+    "total_connections": 1104,
+    "unique_ips": 125,
     "top_src_ips": [
       [
         "64.89.161.184",
@@ -666,12 +666,12 @@
         31
       ],
       [
-        "102.88.137.80",
+        "87.251.64.176",
         30
       ],
       [
-        "87.251.64.176",
-        29
+        "102.88.137.80",
+        30
       ],
       [
         "103.189.235.176",
@@ -693,62 +693,18 @@
     "top_dest_ports": [
       [
         "22",
-        1028
+        1034
       ],
       [
         "8443",
-        33
+        36
       ],
       [
         "8000",
-        32
+        34
       ]
     ],
     "recent_connections": [
-      {
-        "src_ip": "35.203.111.63",
-        "dest_port": "8443"
-      },
-      {
-        "src_ip": "174.64.199.77",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "176.65.149.236",
-        "dest_port": "8443"
-      },
-      {
-        "src_ip": "176.65.149.50",
-        "dest_port": "8000"
-      },
-      {
-        "src_ip": "65.49.1.155",
-        "dest_port": "8443"
-      },
-      {
-        "src_ip": "213.209.159.56",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "93.123.72.183",
-        "dest_port": "8000"
-      },
-      {
-        "src_ip": "118.81.85.231",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "221.13.93.61",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "222.176.200.255",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "62.122.195.14",
-        "dest_port": "22"
-      },
       {
         "src_ip": "117.250.250.2",
         "dest_port": "22"
@@ -783,6 +739,50 @@
       },
       {
         "src_ip": "142.93.114.198",
+        "dest_port": "8443"
+      },
+      {
+        "src_ip": "20.163.15.238",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "20.163.15.238",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "20.163.15.238",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "87.251.64.176",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "42.83.147.32",
+        "dest_port": "8443"
+      },
+      {
+        "src_ip": "77.90.185.78",
+        "dest_port": "8443"
+      },
+      {
+        "src_ip": "103.68.22.115",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "204.76.203.206",
+        "dest_port": "8000"
+      },
+      {
+        "src_ip": "20.14.88.205",
+        "dest_port": "8000"
+      },
+      {
+        "src_ip": "184.170.249.69",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "84.32.48.102",
         "dest_port": "8443"
       }
     ]
